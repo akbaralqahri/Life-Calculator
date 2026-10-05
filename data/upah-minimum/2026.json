@@ -1,0 +1,1884 @@
+{
+  "tahun": 2026,
+  "diperiksa": "2026-10-04",
+  "keterangan": "UMP 38 provinsi & UMK seluruh kab/kota yang berlaku 1 Januari 2026 (PP 49/2025). Kab/kota di ikut_ump memakai UMP provinsinya.",
+  "atribusi": [
+    "25 provinsi: dibaca dari Kepgub/SK gubernur atau rilis resmi pemerintah daerah (sumber per provinsi).",
+    "13 provinsi (Jambi, Sumatera Selatan, Kepulauan Bangka Belitung, Bengkulu, Lampung, Maluku, Maluku Utara, Papua, Papua Barat, Papua Barat Daya, Papua Selatan, Papua Tengah, Papua Pegunungan): dari UMP_UMK_Indonesia_2026_Revisi.xlsx, kompilasi Nafkah (https://github.com/adenaufal/nafkah, CC BY 4.0) dan Panduan Warga (https://panduanwarga.org, CC BY 4.0) dengan koreksi; perubahan: ejaan nama mengikuti Kemendagri dan perbaikan baris Tulang Bawang Barat.",
+    "UMP Sumatera Utara memakai Rp3.228.971 (diumumkan Gubernur 19 Des 2025: CNBC, Metro TV, CNN); kompilasi Kemnaker/detik & file sumber menulis Rp3.228.949."
+  ],
+  "provinces": [
+    {
+      "provinsi": "Bali",
+      "ump": 3207459,
+      "ump_sk": "Keputusan Gubernur Bali Nomor 1011/03-M/HK/2025 tanggal 19 Desember 2025",
+      "ump_source": "https://cloud-ng.baliprov.go.id/disnakeresdm/2025/12/PENGUMUMAN-DAN-SK-UMP-UMSP-2026.pdf",
+      "umk_sk": "Keputusan Gubernur Bali Nomor 1021/03-M/HK/2025 tanggal 23 Desember 2025",
+      "umk_source": "https://cloud-ng.baliprov.go.id/disnakeresdm/2025/12/PENGUMUMAN-DAN-SK-UMK-UMSK-TAHUN-2026.pdf",
+      "umk_source_2": "https://www.kompas.tv/regional/639859/upah-minimum-bali-2026-naik-umk-badung-paling-tinggi",
+      "umk": [
+        {
+          "wilayah": "Kabupaten Badung",
+          "nilai": 3791002.57
+        },
+        {
+          "wilayah": "Kota Denpasar",
+          "nilai": 3499878.78
+        },
+        {
+          "wilayah": "Kabupaten Gianyar",
+          "nilai": 3316798.48
+        },
+        {
+          "wilayah": "Kabupaten Tabanan",
+          "nilai": 3287678.87
+        }
+      ],
+      "ikut_ump": [
+        "Kabupaten Bangli",
+        "Kabupaten Buleleng",
+        "Kabupaten Jembrana",
+        "Kabupaten Karangasem",
+        "Kabupaten Klungkung"
+      ],
+      "jumlah_kabkota_resmi": 9,
+      "catatan": "Dari PDF resmi Disnaker ESDM Bali (pengumuman + scan Kepgub). Diktum KETIGA Kepgub 1021: daerah yang tidak tercantum (Bangli, Buleleng, Jembrana, Karangasem, Klungkung) memakai UMP & UMSP 2026. Cocok dengan kompas.tv, metrotvnews, detikBali. Sektoral (tidak dimodelkan): UMSP Bali Rp3.267.693; UMSK Badung Rp3.828.912,60. Tidak ada revisi 2026.",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Nusa Tenggara Barat",
+      "ump": 2673861,
+      "ump_sk": "Keputusan Gubernur NTB Nomor 100.3.3.1-683 Tahun 2025 tanggal 22 Desember 2025",
+      "ump_source": "https://drive.google.com/file/d/15U5EM7GLd0TQRHTEe47EGRn03lRWni5x/view",
+      "umk_sk": "Kepgub NTB 100.3.3.1-686 s.d. 100.3.3.1-695 Tahun 2025 (satu per kab/kota), 24 Desember 2025",
+      "umk_source": "https://drive.google.com/drive/folders/1u0omGfXup1IXMpyhJHV0hN7iUBsgDJop",
+      "umk_source_2": "https://www.detik.com/bali/nusra/d-8287566/daftar-umk-di-seluruh-kabupaten-ntb-berlaku-1-januari-sumbawa-barat-tertinggi",
+      "umk": [
+        {
+          "wilayah": "Kota Mataram",
+          "nilai": 3019015
+        },
+        {
+          "wilayah": "Kabupaten Lombok Barat",
+          "nilai": 2712254
+        },
+        {
+          "wilayah": "Kabupaten Lombok Utara",
+          "nilai": 2758221
+        },
+        {
+          "wilayah": "Kabupaten Lombok Tengah",
+          "nilai": 2741526
+        },
+        {
+          "wilayah": "Kabupaten Lombok Timur",
+          "nilai": 2744628
+        },
+        {
+          "wilayah": "Kabupaten Sumbawa",
+          "nilai": 2747478
+        },
+        {
+          "wilayah": "Kabupaten Sumbawa Barat",
+          "nilai": 3136468
+        },
+        {
+          "wilayah": "Kabupaten Dompu",
+          "nilai": 2751290
+        },
+        {
+          "wilayah": "Kabupaten Bima",
+          "nilai": 2767580
+        },
+        {
+          "wilayah": "Kota Bima",
+          "nilai": 2831163
+        }
+      ],
+      "ikut_ump": [],
+      "jumlah_kabkota_resmi": 10,
+      "catatan": "Semua 10 kab/kota menetapkan UMK, satu Kepgub per daerah (folder resmi Disnakertrans NTB, dirujuk dari https://disnakertrans.ntbprov.go.id/keputusan-gubernur/). UMP Rp2.673.861 sesuai SK, Disnakertrans NTB, CNBC, detikFinance; detikBali salah ketik Rp2.673.898. Tidak ada revisi 2026.",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Nusa Tenggara Timur",
+      "ump": 2455898,
+      "ump_sk": "Keputusan Gubernur NTT Nomor 528/KEP/HK/2025 tanggal 19 Desember 2025",
+      "ump_source": "https://jdih.nttprov.go.id/dokumen/view?id=4491",
+      "umk_sk": "Keputusan Gubernur NTT Nomor 535/KEP/HK/2025 tanggal 23 Desember 2025 tentang Upah Minimum Kota Kupang Tahun 2026",
+      "umk_source": "https://jdih.nttprov.go.id/dokumen/view?id=4495",
+      "umk_source_2": "https://www.detik.com/bali/nusra/d-8287703/besaran-umk-di-22-kabupaten-kota-ntt-tahun-2026-daerah-ini-paling-tinggi",
+      "umk": [
+        {
+          "wilayah": "Kota Kupang",
+          "nilai": 2532852.79
+        }
+      ],
+      "ikut_ump": [
+        "Kabupaten Alor",
+        "Kabupaten Belu",
+        "Kabupaten Ende",
+        "Kabupaten Flores Timur",
+        "Kabupaten Kupang",
+        "Kabupaten Lembata",
+        "Kabupaten Malaka",
+        "Kabupaten Manggarai",
+        "Kabupaten Manggarai Barat",
+        "Kabupaten Manggarai Timur",
+        "Kabupaten Nagekeo",
+        "Kabupaten Ngada",
+        "Kabupaten Rote Ndao",
+        "Kabupaten Sabu Raijua",
+        "Kabupaten Sikka",
+        "Kabupaten Sumba Barat",
+        "Kabupaten Sumba Barat Daya",
+        "Kabupaten Sumba Tengah",
+        "Kabupaten Sumba Timur",
+        "Kabupaten Timor Tengah Selatan",
+        "Kabupaten Timor Tengah Utara"
+      ],
+      "jumlah_kabkota_resmi": 22,
+      "catatan": "Hanya Kota Kupang yang menetapkan UMK 2026 (JDIH NTT: tiap tahun hanya SK UMP + UMK Kota Kupang); 21 kabupaten ikut UMP. Kota Kupang Rp2.532.852,79 sesuai Diktum KEDUA Kepgub 535. UMP tidak berlaku untuk usaha mikro & kecil (Diktum KELIMA). Tidak ada revisi 2026.",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "DKI Jakarta",
+      "ump": 5729876,
+      "ump_sk": "Keputusan Gubernur DKI Jakarta Nomor 1142 Tahun 2025 tentang Upah Minimum Provinsi Tahun 2026 (ditetapkan 23 Desember 2025)",
+      "ump_source": "https://jdih.jakarta.go.id/dokumenPeraturanDirectory/0031/2025KEPGUB00311142.pdf",
+      "umk_sk": null,
+      "umk_source": null,
+      "umk_source_2": null,
+      "umk": [],
+      "ikut_ump": [
+        "Kota Jakarta Pusat",
+        "Kota Jakarta Utara",
+        "Kota Jakarta Barat",
+        "Kota Jakarta Selatan",
+        "Kota Jakarta Timur",
+        "Kabupaten Kepulauan Seribu"
+      ],
+      "jumlah_kabkota_resmi": 6,
+      "catatan": "DKI tidak punya UMK; satu UMP untuk seluruh provinsi (Diktum KESATU Kepgub 1142/2025), dibaca dari scan resmi JDIH Jakarta (status Berlaku per 4 Okt 2026). Cocok dengan detik, hukumonline, metrotvnews. Nama resmi memakai 'Kota Administrasi'/'Kabupaten Administrasi'. Gugatan KSPI ke PTUN (Jan 2026) belum ada putusan yang mengubah UMP.",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Jawa Barat",
+      "ump": 2317601,
+      "ump_sk": "Keputusan Gubernur Jawa Barat Nomor 561/Kep.859-Kesra/2025 tentang Upah Minimum Provinsi Jawa Barat Tahun 2026",
+      "ump_source": "https://www.detik.com/jabar/berita/d-8276064/ump-jabar-2026-ditetapkan-rp2-31-juta",
+      "umk_sk": "Keputusan Gubernur Jawa Barat Nomor 561.7/Kep.862-Kesra/2025 tentang Upah Minimum Kabupaten/Kota Tahun 2026 (ditetapkan 24 Desember 2025)",
+      "umk_source": "https://spkep-spsi.org/wp-content/uploads/2025/12/KEPUTUSAN_GUBERNUR_Upah_Minimum_KabupatenKota_Tahu_251224_182207.pdf",
+      "umk_source_2": "https://www.detik.com/jabar/berita/d-8276574/daftar-umk-jawa-barat-2026-kota-bekasi-nyaris-sentuh-rp-6-juta",
+      "umk": [
+        {
+          "wilayah": "Kota Bekasi",
+          "nilai": 5999443
+        },
+        {
+          "wilayah": "Kabupaten Karawang",
+          "nilai": 5886853
+        },
+        {
+          "wilayah": "Kabupaten Bekasi",
+          "nilai": 5938885
+        },
+        {
+          "wilayah": "Kabupaten Purwakarta",
+          "nilai": 5052856
+        },
+        {
+          "wilayah": "Kabupaten Subang",
+          "nilai": 3737482
+        },
+        {
+          "wilayah": "Kota Depok",
+          "nilai": 5522662
+        },
+        {
+          "wilayah": "Kota Bogor",
+          "nilai": 5437203
+        },
+        {
+          "wilayah": "Kabupaten Bogor",
+          "nilai": 5161769
+        },
+        {
+          "wilayah": "Kabupaten Sukabumi",
+          "nilai": 3831926
+        },
+        {
+          "wilayah": "Kabupaten Cianjur",
+          "nilai": 3316191
+        },
+        {
+          "wilayah": "Kota Sukabumi",
+          "nilai": 3192807
+        },
+        {
+          "wilayah": "Kota Bandung",
+          "nilai": 4737678
+        },
+        {
+          "wilayah": "Kota Cimahi",
+          "nilai": 4090568
+        },
+        {
+          "wilayah": "Kabupaten Bandung Barat",
+          "nilai": 3984711
+        },
+        {
+          "wilayah": "Kabupaten Sumedang",
+          "nilai": 3949856
+        },
+        {
+          "wilayah": "Kabupaten Bandung",
+          "nilai": 3972202
+        },
+        {
+          "wilayah": "Kabupaten Indramayu",
+          "nilai": 2910254
+        },
+        {
+          "wilayah": "Kota Cirebon",
+          "nilai": 2878646
+        },
+        {
+          "wilayah": "Kabupaten Cirebon",
+          "nilai": 2880798
+        },
+        {
+          "wilayah": "Kabupaten Majalengka",
+          "nilai": 2595368
+        },
+        {
+          "wilayah": "Kabupaten Kuningan",
+          "nilai": 2369380
+        },
+        {
+          "wilayah": "Kota Tasikmalaya",
+          "nilai": 2980336
+        },
+        {
+          "wilayah": "Kabupaten Tasikmalaya",
+          "nilai": 2871874
+        },
+        {
+          "wilayah": "Kabupaten Garut",
+          "nilai": 2472227
+        },
+        {
+          "wilayah": "Kabupaten Ciamis",
+          "nilai": 2373644
+        },
+        {
+          "wilayah": "Kabupaten Pangandaran",
+          "nilai": 2351250
+        },
+        {
+          "wilayah": "Kota Banjar",
+          "nilai": 2361241
+        }
+      ],
+      "ikut_ump": [],
+      "jumlah_kabkota_resmi": 27,
+      "catatan": "UMK dari teks Kepgub 561.7/Kep.862-Kesra/2025 ber-TTE (kode BSrE 947EA8D102), salinan di situs serikat pekerja karena jabarprov.go.id menolak akses otomatis; 27/27 cocok dengan detik d-8276574 & hukumonline. Daftar di detik d-8276785 adalah REKOMENDASI bupati/wali kota (mis. Kota Bekasi 5.992.931), bukan Kepgub. Yang dibatalkan PTUN Bandung (Jul 2026) hanya Kepgub UMSK; UMK tidak berubah.",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Banten",
+      "ump": 3100881.4,
+      "ump_sk": "Keputusan Gubernur Banten Nomor 701 Tahun 2025 tentang Penetapan Upah Minimum Provinsi Banten Tahun 2026 (ditetapkan 24 Desember 2025)",
+      "ump_source": "https://ppid.bantenprov.go.id/informasi-publik/download/kepgub-banten-upah-minimum-provinsi-tahun-2026-202512241557.pdf",
+      "umk_sk": "Keputusan Gubernur Banten Nomor 703 Tahun 2025 tentang Penetapan Upah Minimum Kabupaten/Kota di Provinsi Banten Tahun 2026 (ditetapkan 24 Desember 2025)",
+      "umk_source": "https://ppid.bantenprov.go.id/storage/document/kepgub-banten-upah-minimum-kabupaten-dan-kota-tahun-2026-202512241557.pdf",
+      "umk_source_2": "https://www.detik.com/jabar/berita/d-8276292/segini-ump-dan-umk-banten-2026-cilegon-paling-tinggi",
+      "umk": [
+        {
+          "wilayah": "Kabupaten Pandeglang",
+          "nilai": 3360078.06
+        },
+        {
+          "wilayah": "Kabupaten Lebak",
+          "nilai": 3330010.62
+        },
+        {
+          "wilayah": "Kabupaten Tangerang",
+          "nilai": 5210377.0
+        },
+        {
+          "wilayah": "Kabupaten Serang",
+          "nilai": 5178521.19
+        },
+        {
+          "wilayah": "Kota Tangerang",
+          "nilai": 5399405.69
+        },
+        {
+          "wilayah": "Kota Cilegon",
+          "nilai": 5469922.59
+        },
+        {
+          "wilayah": "Kota Serang",
+          "nilai": 4665927.94
+        },
+        {
+          "wilayah": "Kota Tangerang Selatan",
+          "nilai": 5247870.0
+        }
+      ],
+      "ikut_ump": [],
+      "jumlah_kabkota_resmi": 8,
+      "catatan": "UMP & UMK dari PDF Kepgub resmi di ppid.bantenprov.go.id (ditandatangani 24 Des 2025, berlaku 1 Jan 2026). Angka resmi memuat sen; media membulatkan. Tidak ada revisi 2026.",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "DI Yogyakarta",
+      "ump": 2417495,
+      "ump_sk": "Keputusan Gubernur DIY Nomor 442 Tahun 2025 tentang Penetapan Upah Minimum Provinsi Tahun 2026",
+      "ump_source": "https://jogjaprov.go.id/berita/ump-diy-2026-naik-678",
+      "umk_sk": "Keputusan Gubernur DIY Nomor 443 Tahun 2025 tentang Penetapan Upah Minimum Kabupaten/Kota Tahun 2026",
+      "umk_source": "https://jogjaprov.go.id/berita/ump-diy-2026-naik-678",
+      "umk_source_2": "https://www.detik.com/jogja/bisnis/d-8280637/daftar-ump-dan-umk-diy-2026-paling-rendah-berapa",
+      "umk": [
+        {
+          "wilayah": "Kota Yogyakarta",
+          "nilai": 2827593
+        },
+        {
+          "wilayah": "Kabupaten Sleman",
+          "nilai": 2624387
+        },
+        {
+          "wilayah": "Kabupaten Bantul",
+          "nilai": 2509001
+        },
+        {
+          "wilayah": "Kabupaten Kulon Progo",
+          "nilai": 2504520
+        },
+        {
+          "wilayah": "Kabupaten Gunungkidul",
+          "nilai": 2468378
+        }
+      ],
+      "ikut_ump": [],
+      "jumlah_kabkota_resmi": 5,
+      "catatan": "Dari rilis resmi Pemda DIY 'UMP DIY 2026 Naik 6,78%' (24 Des 2025, alfa 0,8), cocok dengan detik & jawapos. metrotvnews keliru menyebut UMP 2026 Rp2.570.909; dealls mencantumkan angka lain untuk Bantul/Kulon Progo/Gunungkidul yang bertentangan dengan rilis resmi. Pemda DIY menolak tuntutan revisi (Jan 2026).",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Jawa Tengah",
+      "ump": 2327386.07,
+      "ump_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/504 Tahun 2025 tentang Upah Minimum Provinsi dan Upah Minimum Sektoral Provinsi Jawa Tengah Tahun 2026 (ditetapkan 24 Desember 2025, berlaku 1 Januari 2026)",
+      "ump_source": "https://jdih.jatengprov.go.id/produk_hukum/kepgub/sk_100.3.3.1-504_th_2025_auten.pdf",
+      "umk_sk": "Keputusan Gubernur Jawa Tengah Nomor 100.3.3.1/505 Tahun 2025 tentang Upah Minimum Kabupaten/Kota pada 35 (Tiga Puluh Lima) Kabupaten/Kota dan Upah Minimum Sektoral Kabupaten/Kota di Provinsi Jawa Tengah Tahun 2026 (ditetapkan 24 Desember 2025, berlaku 1 Januari 2026)",
+      "umk_source": "https://jdih.jatengprov.go.id/produk_hukum/kepgub/sk_100.3.3.1-505_th_2025_auten.pdf",
+      "umk_source_2": "https://www.detik.com/jateng/bisnis/d-8275954/daftar-lengkap-umk-2026-se-jateng-semarang-tertinggi-banjarnegara-terendah",
+      "umk": [
+        {
+          "wilayah": "Kabupaten Cilacap",
+          "nilai": 2773184
+        },
+        {
+          "wilayah": "Kabupaten Banyumas",
+          "nilai": 2474598.99
+        },
+        {
+          "wilayah": "Kabupaten Purbalingga",
+          "nilai": 2474721.94
+        },
+        {
+          "wilayah": "Kabupaten Banjarnegara",
+          "nilai": 2327813.08
+        },
+        {
+          "wilayah": "Kabupaten Kebumen",
+          "nilai": 2400000
+        },
+        {
+          "wilayah": "Kabupaten Purworejo",
+          "nilai": 2401961.91
+        },
+        {
+          "wilayah": "Kabupaten Wonosobo",
+          "nilai": 2455038.01
+        },
+        {
+          "wilayah": "Kabupaten Magelang",
+          "nilai": 2607790
+        },
+        {
+          "wilayah": "Kabupaten Boyolali",
+          "nilai": 2537949
+        },
+        {
+          "wilayah": "Kabupaten Klaten",
+          "nilai": 2538691
+        },
+        {
+          "wilayah": "Kabupaten Sukoharjo",
+          "nilai": 2500000
+        },
+        {
+          "wilayah": "Kabupaten Wonogiri",
+          "nilai": 2335126
+        },
+        {
+          "wilayah": "Kabupaten Karanganyar",
+          "nilai": 2592154.06
+        },
+        {
+          "wilayah": "Kabupaten Sragen",
+          "nilai": 2337700
+        },
+        {
+          "wilayah": "Kabupaten Grobogan",
+          "nilai": 2399186
+        },
+        {
+          "wilayah": "Kabupaten Blora",
+          "nilai": 2345695
+        },
+        {
+          "wilayah": "Kabupaten Rembang",
+          "nilai": 2386305
+        },
+        {
+          "wilayah": "Kabupaten Pati",
+          "nilai": 2485000
+        },
+        {
+          "wilayah": "Kabupaten Kudus",
+          "nilai": 2818585
+        },
+        {
+          "wilayah": "Kabupaten Jepara",
+          "nilai": 2756501
+        },
+        {
+          "wilayah": "Kabupaten Demak",
+          "nilai": 3122805
+        },
+        {
+          "wilayah": "Kabupaten Semarang",
+          "nilai": 2940088
+        },
+        {
+          "wilayah": "Kabupaten Temanggung",
+          "nilai": 2397000
+        },
+        {
+          "wilayah": "Kabupaten Kendal",
+          "nilai": 2992994
+        },
+        {
+          "wilayah": "Kabupaten Batang",
+          "nilai": 2708520
+        },
+        {
+          "wilayah": "Kabupaten Pekalongan",
+          "nilai": 2633700
+        },
+        {
+          "wilayah": "Kabupaten Pemalang",
+          "nilai": 2433254
+        },
+        {
+          "wilayah": "Kabupaten Tegal",
+          "nilai": 2484162
+        },
+        {
+          "wilayah": "Kabupaten Brebes",
+          "nilai": 2400350.47
+        },
+        {
+          "wilayah": "Kota Magelang",
+          "nilai": 2429285
+        },
+        {
+          "wilayah": "Kota Surakarta",
+          "nilai": 2570000
+        },
+        {
+          "wilayah": "Kota Salatiga",
+          "nilai": 2698273.24
+        },
+        {
+          "wilayah": "Kota Semarang",
+          "nilai": 3701709
+        },
+        {
+          "wilayah": "Kota Pekalongan",
+          "nilai": 2700926
+        },
+        {
+          "wilayah": "Kota Tegal",
+          "nilai": 2526510
+        }
+      ],
+      "ikut_ump": [],
+      "jumlah_kabkota_resmi": 35,
+      "catatan": "Semua 35 kab/kota punya UMK 2026 (Lampiran I Kepgub 100.3.3.1/505). Dibaca dari PDF resmi JDIH Jateng, cocok 35/35 dengan detik.com & rilis Pemprov. UMP naik 7,28% (inflasi 2,65% + PE 5,15% x alfa 0,90). Tidak ada revisi 2026 hingga 4 Okt 2026.",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Jawa Timur",
+      "ump": 2446880.68,
+      "ump_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/934/013/2025 tentang Upah Minimum Provinsi Jawa Timur Tahun 2026 (ditetapkan 23 Desember 2025, berlaku 1 Januari 2026)",
+      "ump_source": "https://files.jdih.jatimprov.go.id/jdih-prod/uploads/topics/2025kg00350934.pdf",
+      "umk_sk": "Keputusan Gubernur Jawa Timur Nomor 100.3.3.1/937/013/2025 tentang Upah Minimum Kabupaten/Kota di Jawa Timur Tahun 2026 (ditetapkan 24 Desember 2025, berlaku 1 Januari 2026)",
+      "umk_source": "https://files.jdih.jatimprov.go.id/jdih-prod/uploads/topics/2025kg00350937.pdf",
+      "umk_source_2": "https://www.detik.com/jatim/bisnis/d-8277107/resmi-ini-besaran-umk-2026-se-jawa-timur",
+      "umk": [
+        {
+          "wilayah": "Kota Surabaya",
+          "nilai": 5288796
+        },
+        {
+          "wilayah": "Kabupaten Gresik",
+          "nilai": 5195401
+        },
+        {
+          "wilayah": "Kabupaten Sidoarjo",
+          "nilai": 5191541
+        },
+        {
+          "wilayah": "Kabupaten Pasuruan",
+          "nilai": 5187681
+        },
+        {
+          "wilayah": "Kabupaten Mojokerto",
+          "nilai": 5176101
+        },
+        {
+          "wilayah": "Kabupaten Malang",
+          "nilai": 3802862
+        },
+        {
+          "wilayah": "Kota Malang",
+          "nilai": 3736101
+        },
+        {
+          "wilayah": "Kota Batu",
+          "nilai": 3562484
+        },
+        {
+          "wilayah": "Kota Pasuruan",
+          "nilai": 3555301
+        },
+        {
+          "wilayah": "Kabupaten Jombang",
+          "nilai": 3320770
+        },
+        {
+          "wilayah": "Kabupaten Tuban",
+          "nilai": 3229092
+        },
+        {
+          "wilayah": "Kota Mojokerto",
+          "nilai": 3208556
+        },
+        {
+          "wilayah": "Kabupaten Lamongan",
+          "nilai": 3196328
+        },
+        {
+          "wilayah": "Kabupaten Probolinggo",
+          "nilai": 3164526
+        },
+        {
+          "wilayah": "Kota Probolinggo",
+          "nilai": 3045172
+        },
+        {
+          "wilayah": "Kabupaten Jember",
+          "nilai": 3012197
+        },
+        {
+          "wilayah": "Kabupaten Banyuwangi",
+          "nilai": 2989145
+        },
+        {
+          "wilayah": "Kota Kediri",
+          "nilai": 2742806
+        },
+        {
+          "wilayah": "Kabupaten Bojonegoro",
+          "nilai": 2685983
+        },
+        {
+          "wilayah": "Kabupaten Kediri",
+          "nilai": 2651603
+        },
+        {
+          "wilayah": "Kota Blitar",
+          "nilai": 2639518
+        },
+        {
+          "wilayah": "Kabupaten Tulungagung",
+          "nilai": 2628190
+        },
+        {
+          "wilayah": "Kota Madiun",
+          "nilai": 2588794
+        },
+        {
+          "wilayah": "Kabupaten Lumajang",
+          "nilai": 2578320
+        },
+        {
+          "wilayah": "Kabupaten Blitar",
+          "nilai": 2567744
+        },
+        {
+          "wilayah": "Kabupaten Nganjuk",
+          "nilai": 2564627
+        },
+        {
+          "wilayah": "Kabupaten Ngawi",
+          "nilai": 2556815
+        },
+        {
+          "wilayah": "Kabupaten Magetan",
+          "nilai": 2553866
+        },
+        {
+          "wilayah": "Kabupaten Sumenep",
+          "nilai": 2553688
+        },
+        {
+          "wilayah": "Kabupaten Madiun",
+          "nilai": 2553221
+        },
+        {
+          "wilayah": "Kabupaten Bangkalan",
+          "nilai": 2550274
+        },
+        {
+          "wilayah": "Kabupaten Ponorogo",
+          "nilai": 2549876
+        },
+        {
+          "wilayah": "Kabupaten Trenggalek",
+          "nilai": 2530313
+        },
+        {
+          "wilayah": "Kabupaten Pamekasan",
+          "nilai": 2528004
+        },
+        {
+          "wilayah": "Kabupaten Pacitan",
+          "nilai": 2514892
+        },
+        {
+          "wilayah": "Kabupaten Bondowoso",
+          "nilai": 2496886
+        },
+        {
+          "wilayah": "Kabupaten Sampang",
+          "nilai": 2484443
+        },
+        {
+          "wilayah": "Kabupaten Situbondo",
+          "nilai": 2483962
+        }
+      ],
+      "ikut_ump": [],
+      "jumlah_kabkota_resmi": 38,
+      "catatan": "Semua 38 kab/kota punya UMK 2026 (Lampiran Kepgub 100.3.3.1/937/013/2025). Dibaca dari PDF resmi JDIH Jatim, cocok 38/38 dengan detik.com, JawaPos, Metro TV. UMP naik ±6,11%. Situbondo sempat diprotes (Des 2025) tetapi belum ada revisi hingga 4 Okt 2026; Jatim pernah merevisi UMK 2025 di tengah tahun (PTUN), jadi cek ulang sebelum rilis tahunan.",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Kalimantan Barat",
+      "ump": 3054552,
+      "ump_sk": "Keputusan Gubernur Kalimantan Barat Nomor 1350/NAKERTRAN/2025 (nomor hanya dari dealls.com)",
+      "ump_source": "https://finance.detik.com/berita-ekonomi-bisnis/d-8295123/daftar-lengkap-ump-di-38-provinsi-yang-langsung-berlaku-januari-2026",
+      "umk_sk": "Keputusan Gubernur Kalimantan Barat Nomor 1355/NAKERTRAN/2025 tentang UMK di Provinsi Kalimantan Barat Tahun 2026 (23 Desember 2025)",
+      "umk_source": "https://data.goodstats.id/statistic/simak-besaran-umk-provinsi-kalimantan-barat-2026-QkFFM",
+      "umk_source_2": "https://www.kanalkalimantan.com/sudah-sah-daftar-lengkap-ump-dan-umk-kalimantan-2026-di-semua-provinsi-ada-yang-tembus-rp37-juta/",
+      "umk": [
+        {
+          "wilayah": "Kabupaten Ketapang",
+          "nilai": 3561801
+        },
+        {
+          "wilayah": "Kabupaten Kayong Utara",
+          "nilai": 3370586
+        },
+        {
+          "wilayah": "Kabupaten Bengkayang",
+          "nilai": 3252580
+        },
+        {
+          "wilayah": "Kota Singkawang",
+          "nilai": 3247387
+        },
+        {
+          "wilayah": "Kabupaten Mempawah",
+          "nilai": 3220801
+        },
+        {
+          "wilayah": "Kabupaten Landak",
+          "nilai": 3211256
+        },
+        {
+          "wilayah": "Kota Pontianak",
+          "nilai": 3205220
+        },
+        {
+          "wilayah": "Kabupaten Sambas",
+          "nilai": 3202663
+        },
+        {
+          "wilayah": "Kabupaten Sintang",
+          "nilai": 3187965
+        },
+        {
+          "wilayah": "Kabupaten Sanggau",
+          "nilai": 3121747
+        },
+        {
+          "wilayah": "Kabupaten Melawi",
+          "nilai": 3109431
+        },
+        {
+          "wilayah": "Kabupaten Kapuas Hulu",
+          "nilai": 3106259
+        },
+        {
+          "wilayah": "Kabupaten Kubu Raya",
+          "nilai": 3100000
+        }
+      ],
+      "ikut_ump": [
+        "Kabupaten Sekadau"
+      ],
+      "jumlah_kabkota_resmi": 14,
+      "catatan": "UMP Rp3.054.552 (detik, Kanal Kalimantan, Antara Kalbar). 13 UMK dari transkripsi GoodStats atas PDF Kepgub 1355 (PDF resmi tidak bisa diunduh), cocok 13/13 dengan Kanal Kalimantan; Antara mengonfirmasi Kubu Raya & Pontianak. Sekadau tidak ada di daftar Kepgub (GoodStats & Dealls); hanya Kanal Kalimantan menulis UMK Sekadau Rp3.120.000 tanpa SK, jadi dicatat ikut UMP — perlu dicek ulang. Dealls menulis Sanggau 3.121.256 (tampak tertukar dengan Landak).",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Kalimantan Tengah",
+      "ump": 3686138,
+      "ump_sk": "Keputusan Gubernur Kalimantan Tengah Nomor 188.44/477/2025 (19 Desember 2025)",
+      "ump_source": "https://kalteng.antaranews.com/berita/798703/upah-minimum-provinsi-kalimantan-tengah-2026-mengalami-kenaikan",
+      "umk_sk": "Keputusan Gubernur Kalimantan Tengah Nomor 188.44/492/2025 (nomor dari GoodStats), berlaku 1 Januari–31 Desember 2026",
+      "umk_source": "https://data.goodstats.id/statistic/simak-besaran-umk-provinsi-kalimantan-tengah-2026-5BtCb",
+      "umk_source_2": "https://www.kanalkalimantan.com/sudah-sah-daftar-lengkap-ump-dan-umk-kalimantan-2026-di-semua-provinsi-ada-yang-tembus-rp37-juta/",
+      "umk": [
+        {
+          "wilayah": "Kabupaten Barito Utara",
+          "nilai": 4093071
+        },
+        {
+          "wilayah": "Kabupaten Seruyan",
+          "nilai": 4051079
+        },
+        {
+          "wilayah": "Kabupaten Barito Selatan",
+          "nilai": 4045059
+        },
+        {
+          "wilayah": "Kabupaten Murung Raya",
+          "nilai": 3998046
+        },
+        {
+          "wilayah": "Kabupaten Lamandau",
+          "nilai": 3938998
+        },
+        {
+          "wilayah": "Kabupaten Sukamara",
+          "nilai": 3912098
+        },
+        {
+          "wilayah": "Kabupaten Kotawaringin Barat",
+          "nilai": 3909005
+        },
+        {
+          "wilayah": "Kabupaten Gunung Mas",
+          "nilai": 3770716
+        },
+        {
+          "wilayah": "Kabupaten Kotawaringin Timur",
+          "nilai": 3756643.61
+        },
+        {
+          "wilayah": "Kabupaten Katingan",
+          "nilai": 3729766
+        },
+        {
+          "wilayah": "Kota Palangka Raya",
+          "nilai": 3724677
+        },
+        {
+          "wilayah": "Kabupaten Barito Timur",
+          "nilai": 3716006
+        },
+        {
+          "wilayah": "Kabupaten Kapuas",
+          "nilai": 3710096
+        },
+        {
+          "wilayah": "Kabupaten Pulang Pisau",
+          "nilai": 3701205
+        }
+      ],
+      "ikut_ump": [],
+      "jumlah_kabkota_resmi": 14,
+      "catatan": "UMP Rp3.686.138 (Antara Kalteng, detikKalimantan). Semua 14 kab/kota punya UMK. File Kepgub di Google Drive >10 MB tidak terbaca; nilai dari GoodStats & Kanal Kalimantan (cocok 14/14). Kotawaringin Timur Rp3.756.643,61 dari laporan Dewan Pengupahan (Antara); nilai lain mungkin memuat sen (<Rp1) yang dihilangkan sumber.",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Kalimantan Selatan",
+      "ump": 3725000,
+      "ump_sk": "Keputusan Gubernur Kalimantan Selatan Nomor 100.3.3.1/01101/KUM/2025",
+      "ump_source": "https://www.detik.com/kalimantan/bisnis/d-8276540/gubernur-kalsel-resmi-umumkan-ump-2026-naik-rp-228-ribu",
+      "umk_sk": "Keputusan Gubernur Kalimantan Selatan Nomor 100.3.3.1/01107/KUM/2025 tentang UMK dan UMSK Tahun 2026 (24 Desember 2025)",
+      "umk_source": "https://www.kanalkalimantan.com/ump-2026-kalimantan-selatan-naik-654-begini-aturannya/",
+      "umk_source_2": "https://data.goodstats.id/statistic/simak-besaran-umk-provinsi-kalimantan-selatan-2026-TrPK0",
+      "umk": [
+        {
+          "wilayah": "Kabupaten Kotabaru",
+          "nilai": 3904645
+        },
+        {
+          "wilayah": "Kota Banjarmasin",
+          "nilai": 3855894
+        },
+        {
+          "wilayah": "Kota Banjarbaru",
+          "nilai": 3843037.66
+        },
+        {
+          "wilayah": "Kabupaten Tabalong",
+          "nilai": 3827935
+        },
+        {
+          "wilayah": "Kabupaten Tanah Bumbu",
+          "nilai": 3736000
+        }
+      ],
+      "ikut_ump": [
+        "Kabupaten Banjar",
+        "Kabupaten Barito Kuala",
+        "Kabupaten Tapin",
+        "Kabupaten Hulu Sungai Selatan",
+        "Kabupaten Hulu Sungai Tengah",
+        "Kabupaten Hulu Sungai Utara",
+        "Kabupaten Balangan",
+        "Kabupaten Tanah Laut"
+      ],
+      "jumlah_kabkota_resmi": 13,
+      "catatan": "UMP Rp3.725.000 (detik, Antara Kalsel). PDF Kepgub UMK di balik Cloudflare tidak terbaca; 5 UMK dari Kanal Kalimantan (dengan sen) & GoodStats; 8 kab lain memakai UMP. Banjarbaru pertama kali punya UMK sendiri di 2026. Tabalong mungkin Rp3.827.935,36 (aritmetika Antara) — dipakai Rp3.827.935 (Kanal).",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Kalimantan Timur",
+      "ump": 3762431,
+      "ump_sk": "Pengumuman Gubernur Kalimantan Timur Nomor 500.15.14.1/5097/DTKT.Srk-IV/2025 (24 Desember 2025)",
+      "ump_source": "https://diskominfo.kaltimprov.go.id/berita/ump-kaltim-2026-ditetapkan-rp-3-76-juta-berlaku-mulai-1-januari",
+      "umk_sk": "Pengumuman Gubernur Kalimantan Timur Nomor 500.15.14.1/5096/DTKT.Srk-IV/2025 tentang UMK dan UMSK Tahun 2026",
+      "umk_source": "https://www.kaltimprov.go.id/detailberita/gubernur-kaltim-tetapkan-umk-2026-berau-tertinggi-capai-rp-439-juta",
+      "umk_source_2": "https://lipsus.kompas.com/pameranotomotifnasional2026/read/2025/12/30/091628326/ump-kaltim-2026-naik-jadi-rp-376-juta-umk-kalimantan-timur-2026-tertinggi",
+      "umk": [
+        {
+          "wilayah": "Kabupaten Berau",
+          "nilai": 4391337.55
+        },
+        {
+          "wilayah": "Kabupaten Kutai Barat",
+          "nilai": 4231617.4
+        },
+        {
+          "wilayah": "Kabupaten Penajam Paser Utara",
+          "nilai": 4181134
+        },
+        {
+          "wilayah": "Kabupaten Kutai Timur",
+          "nilai": 4067436
+        },
+        {
+          "wilayah": "Kabupaten Kutai Kartanegara",
+          "nilai": 3991797
+        },
+        {
+          "wilayah": "Kota Samarinda",
+          "nilai": 3983882
+        },
+        {
+          "wilayah": "Kota Balikpapan",
+          "nilai": 3856694.43
+        },
+        {
+          "wilayah": "Kota Bontang",
+          "nilai": 3799480
+        },
+        {
+          "wilayah": "Kabupaten Paser",
+          "nilai": 3776998.06
+        }
+      ],
+      "ikut_ump": [
+        "Kabupaten Mahakam Ulu"
+      ],
+      "jumlah_kabkota_resmi": 10,
+      "catatan": "UMP Rp3.762.431 (Diskominfo Kaltim, Kompas, detik). UMK bersen dari halaman resmi Pemprov Kaltim, cocok dengan Kompas & Bontang Post. Mahakam Ulu tidak ada di pengumuman dan memakai UMP (tanpa Dewan Pengupahan). GoodStats salah ketik PPU 4.181.131.",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Kalimantan Utara",
+      "ump": 3775243,
+      "ump_sk": "Keputusan Gubernur Kalimantan Utara Nomor 100.3.3.1/698/2025 (22 Desember 2025)",
+      "ump_source": "https://drive.google.com/file/d/1IuvPA0DwjChvabgVRqUPN5sl0sWkF0qT/view",
+      "umk_sk": "Satu Kepgub per daerah, 22 Desember 2025: Kota Tarakan 100.3.3.1/708; Kab. Bulungan /700; Kab. Nunukan /702; Kab. Malinau /704; Kab. Tana Tidung /706 (Tahun 2025)",
+      "umk_source": "https://drive.google.com/drive/folders/1w0iRlSGyGwhnS1fbNK2wibHCmjzyxYt4",
+      "umk_source_2": "https://www.kanalkalimantan.com/jadi-ump-tertinggi-segini-rincian-ump-dan-umk-kalimantan-utara-2026-naik-545/",
+      "umk": [
+        {
+          "wilayah": "Kota Tarakan",
+          "nilai": 4742169
+        },
+        {
+          "wilayah": "Kabupaten Malinau",
+          "nilai": 4040073
+        },
+        {
+          "wilayah": "Kabupaten Bulungan",
+          "nilai": 3900396
+        },
+        {
+          "wilayah": "Kabupaten Tana Tidung",
+          "nilai": 3870800
+        },
+        {
+          "wilayah": "Kabupaten Nunukan",
+          "nilai": 3845251.23
+        }
+      ],
+      "ikut_ump": [],
+      "jumlah_kabkota_resmi": 5,
+      "catatan": "Semua nilai dibaca langsung dari scan salinan Kepgub (Biro Hukum Setda Kaltara), cocok dengan Kanal Kalimantan & GoodStats. Laporan awal (UMP 'Rp3.770.000', dll.) sudah tidak berlaku.",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Sulawesi Utara",
+      "ump": 4002630,
+      "ump_sk": "Keputusan Gubernur Sulawesi Utara Nomor 404 Tahun 2025 (diumumkan 20 Des 2025)",
+      "ump_source": "https://money.kompas.com/read/2026/01/09/092557026/ump-2026-resmi-berlaku-ini-daftar-lengkap-upah-minimum-seluruh-provinsi?page=all",
+      "umk_sk": "Keputusan Gubernur Sulawesi Utara Nomor 407 Tahun 2025 (UMK Kota Manado 2026)",
+      "umk_source": "https://data.goodstats.id/statistic/daftar-umk-sulawesi-utara-2026-kota-manado-paling-tinggi-qIW5v",
+      "umk_source_2": "https://rri.co.id/manado/regional/2064022/pemkot-manado-sepakat-ump-sulut-2026",
+      "umk": [
+        {
+          "wilayah": "Kota Manado",
+          "nilai": 4022017
+        }
+      ],
+      "ikut_ump": [
+        "Kota Bitung",
+        "Kota Kotamobagu",
+        "Kota Tomohon",
+        "Kabupaten Bolaang Mongondow",
+        "Kabupaten Bolaang Mongondow Selatan",
+        "Kabupaten Bolaang Mongondow Timur",
+        "Kabupaten Bolaang Mongondow Utara",
+        "Kabupaten Kepulauan Sangihe",
+        "Kabupaten Kepulauan Siau Tagulandang Biaro",
+        "Kabupaten Kepulauan Talaud",
+        "Kabupaten Minahasa",
+        "Kabupaten Minahasa Selatan",
+        "Kabupaten Minahasa Tenggara",
+        "Kabupaten Minahasa Utara"
+      ],
+      "jumlah_kabkota_resmi": 15,
+      "catatan": "UMP Rp4.002.630 (Kompas, detikSulsel, RRI). UMK Kota Manado Rp4.022.017 dari GoodStats (mengutip Kepgub 407/2025) dan sama dengan rekomendasi Wali Kota (RRI, Pionnews); teks SK 407 tidak terbaca daring. Angka Rp4.054.409 di situs SEO tampak perkiraan, tidak dipakai. 14 daerah lain memakai UMP.",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Gorontalo",
+      "ump": 3405144,
+      "ump_sk": "SK Gubernur Gorontalo Nomor 434/34/XII/2025",
+      "ump_source": "https://berita.gorontaloprov.go.id/2025/12/22/pemprov-tetapkan-besaran-ump-tahun-2026-di-provinsi-gorontalo/",
+      "umk_sk": null,
+      "umk_source": "https://data.goodstats.id/statistic/daftar-umk-gorontalo-2026-semua-daerah-gunakan-ump-uNVQv",
+      "umk_source_2": "https://www.kompas.com/sulawesi-selatan/read/2025/12/22/193457388/ump-gorontalo-2026-resmi-ditetapkan-rp-3405144-naik-57-persen",
+      "umk": [],
+      "ikut_ump": [
+        "Kabupaten Boalemo",
+        "Kabupaten Bone Bolango",
+        "Kabupaten Gorontalo",
+        "Kabupaten Gorontalo Utara",
+        "Kabupaten Pohuwato",
+        "Kota Gorontalo"
+      ],
+      "jumlah_kabkota_resmi": 6,
+      "catatan": "UMP Rp3.405.144 (situs Pemprov, Kompas, detik, CNN, InfoPublik). Tidak ada UMK: Dewan Pengupahan kab/kota belum terbentuk (GoodStats mengutip Kadis Nakertrans ESDM); pola 2025 sama.",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Sulawesi Tengah",
+      "ump": 3179565,
+      "ump_sk": "Keputusan Gubernur Sulawesi Tengah Nomor 500.15.14.1/485/DIS.NAKERTRANS-G.ST/2025 (22 Des 2025)",
+      "ump_source": "https://jdih.sultengprov.go.id/produk-hukum/unduh/1161",
+      "umk_sk": "Kepgub Sulteng 500.15.14.1/486 (Kota Palu), /487 jo. /495 (Kab. Morowali), /488 (Kab. Morowali Utara), /489 (Kab. Poso), /491 (Kab. Buol) Tahun 2025",
+      "umk_source": "https://jdih.sultengprov.go.id/produkhukum?q=upah&jenis_peraturan=35&nomor=&tahun=&status=",
+      "umk_source_2": "https://www.posoline.com/jurang-upah-sulteng-2026-mengapa-umk-poso-tertinggal-rp11-juta-dari-morowali-utara/",
+      "umk": [
+        {
+          "wilayah": "Kabupaten Morowali Utara",
+          "nilai": 4408209
+        },
+        {
+          "wilayah": "Kabupaten Morowali",
+          "nilai": 4223000
+        },
+        {
+          "wilayah": "Kota Palu",
+          "nilai": 3619466.72
+        },
+        {
+          "wilayah": "Kabupaten Poso",
+          "nilai": 3268227
+        },
+        {
+          "wilayah": "Kabupaten Buol",
+          "nilai": 3198109.05
+        }
+      ],
+      "ikut_ump": [
+        "Kabupaten Banggai",
+        "Kabupaten Banggai Kepulauan",
+        "Kabupaten Banggai Laut",
+        "Kabupaten Donggala",
+        "Kabupaten Parigi Moutong",
+        "Kabupaten Sigi",
+        "Kabupaten Tojo Una-Una",
+        "Kabupaten Tolitoli"
+      ],
+      "jumlah_kabkota_resmi": 13,
+      "catatan": "UMP & 4 UMK dibaca dari scan Kepgub di JDIH Sulteng. Morowali Rp4.223.000 dari Posoline & GoodStats (Kepgub 487 asli tidak daring; Kepgub 495 hanya mengubah upah sektoral). Buol: angka Rp3.198.109,05, terbilang 'koma lima'. 8 kabupaten lain memakai UMP. Tolitoli juga ditulis Toli-Toli.",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Sulawesi Barat",
+      "ump": 3315934.82,
+      "ump_sk": "Keputusan Gubernur Sulawesi Barat Nomor 855 Tahun 2025 (23 Des 2025, berlaku 1 Jan 2026)",
+      "ump_source": "https://drive.google.com/file/d/1DoXZ-YcTKQWMg4WlxkZkF4KhtOO7iXEH/view",
+      "umk_sk": "Kepgub Sulbar Nomor 857 (Kab. Mamuju), 858 (Kab. Pasangkayu), 859 (Kab. Polewali Mandar) Tahun 2025, 27 Des 2025",
+      "umk_source": "https://drive.google.com/drive/folders/1WWJ3rzr2vznyEYySz39sDDBLWv-ppG4g",
+      "umk_source_2": "https://data.goodstats.id/statistic/daftar-umk-sulawesi-barat-2026-kab-pasangkayu-paling-tinggi-dmlCM",
+      "umk": [
+        {
+          "wilayah": "Kabupaten Pasangkayu",
+          "nilai": 3564798
+        },
+        {
+          "wilayah": "Kabupaten Mamuju",
+          "nilai": 3363847
+        },
+        {
+          "wilayah": "Kabupaten Polewali Mandar",
+          "nilai": 3327886
+        }
+      ],
+      "ikut_ump": [
+        "Kabupaten Majene",
+        "Kabupaten Mamasa",
+        "Kabupaten Mamuju Tengah"
+      ],
+      "jumlah_kabkota_resmi": 6,
+      "catatan": "Dari salinan Kepgub ber-TTE (BSrE). UMP SK Rp3.315.934,82 (Kemnaker/media membulatkan ke Rp3.315.934). Majene, Mamasa, Mamuju Tengah memakai UMP.",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Sulawesi Selatan",
+      "ump": 3921088.79,
+      "ump_sk": "Keputusan Gubernur Sulawesi Selatan Nomor 2129/XII/Tahun 2025",
+      "ump_source": "https://www.detik.com/sulsel/berita/d-8275592/ump-sulsel-2026-resmi-ditetapkan-naik-7-21-jadi-rp-3-921-088",
+      "umk_sk": "Kepgub Sulsel Nomor 2142 (Kota Makassar), 2141 (Kab. Pangkajene dan Kepulauan), 2140 (Kab. Luwu Timur) /XII/Tahun 2025, 24 Des 2025",
+      "umk_source": "https://drive.google.com/drive/folders/1TuARBoCBooPJ8n-qqUB0uZSrgOD_fEWB",
+      "umk_source_2": "https://data.goodstats.id/statistic/daftar-umk-sulawesi-selatan-2026-kota-makassar-naik-6-l7raV",
+      "umk": [
+        {
+          "wilayah": "Kota Makassar",
+          "nilai": 4148179
+        },
+        {
+          "wilayah": "Kabupaten Pangkajene dan Kepulauan",
+          "nilai": 4032248
+        },
+        {
+          "wilayah": "Kabupaten Luwu Timur",
+          "nilai": 3961166
+        }
+      ],
+      "ikut_ump": [
+        "Kota Palopo",
+        "Kota Parepare",
+        "Kabupaten Bantaeng",
+        "Kabupaten Barru",
+        "Kabupaten Bone",
+        "Kabupaten Bulukumba",
+        "Kabupaten Enrekang",
+        "Kabupaten Gowa",
+        "Kabupaten Jeneponto",
+        "Kabupaten Kepulauan Selayar",
+        "Kabupaten Luwu",
+        "Kabupaten Luwu Utara",
+        "Kabupaten Maros",
+        "Kabupaten Pinrang",
+        "Kabupaten Sidenreng Rappang",
+        "Kabupaten Sinjai",
+        "Kabupaten Soppeng",
+        "Kabupaten Takalar",
+        "Kabupaten Tana Toraja",
+        "Kabupaten Toraja Utara",
+        "Kabupaten Wajo"
+      ],
+      "jumlah_kabkota_resmi": 24,
+      "catatan": "UMP Rp3.921.088,79 (dibacakan Disnakertrans; detikSulsel, Kompas). 3 UMK dari salinan Kepgub ber-TTE. IDN Times salah ketik Makassar Rp4.148.719 (SK: 4.148.179). 21 daerah memakai UMP.",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Sulawesi Tenggara",
+      "ump": 3306496.18,
+      "ump_sk": "Keputusan Gubernur Sulawesi Tenggara Nomor 110.3.3.1/581 Tahun 2025 (24 Des 2025)",
+      "ump_source": "https://jdih.sultraprov.go.id/common/dokumen/2025kg00740581.pdf",
+      "umk_sk": "Kepgub Sultra Nomor 100.3.3.1/582 (Kab. Konawe Utara), /583 (Kab. Kolaka), /584 (Kota Kendari) Tahun 2025, 24 Des 2025",
+      "umk_source": "https://jdih.sultraprov.go.id/dokumen/index?DokumenSearch%5Bjudul%5D=upah",
+      "umk_source_2": "https://kendariinfo.com/umk-kendari-kolaka-dan-konut-resmi-ditetapkan-berikut-besarannya/",
+      "umk": [
+        {
+          "wilayah": "Kabupaten Kolaka",
+          "nilai": 3688130.26
+        },
+        {
+          "wilayah": "Kota Kendari",
+          "nilai": 3516070.42
+        },
+        {
+          "wilayah": "Kabupaten Konawe Utara",
+          "nilai": 3510505.7
+        }
+      ],
+      "ikut_ump": [
+        "Kota Baubau",
+        "Kabupaten Bombana",
+        "Kabupaten Buton",
+        "Kabupaten Buton Selatan",
+        "Kabupaten Buton Tengah",
+        "Kabupaten Buton Utara",
+        "Kabupaten Kolaka Timur",
+        "Kabupaten Kolaka Utara",
+        "Kabupaten Konawe",
+        "Kabupaten Konawe Kepulauan",
+        "Kabupaten Konawe Selatan",
+        "Kabupaten Muna",
+        "Kabupaten Muna Barat",
+        "Kabupaten Wakatobi"
+      ],
+      "jumlah_kabkota_resmi": 17,
+      "catatan": "Keempat nilai dibaca dari scan SK di JDIH Sultra. Diktum KETUJUH SK UMP: UMP berlaku di kab/kota yang tidak menetapkan UMK. Hanya 3 SK UMK 2026 (cocok Kendariinfo & GoodStats).",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Aceh",
+      "ump": 3932552,
+      "ump_sk": "Keputusan Gubernur Aceh Nomor 500.15.14.1/1488/2025, ditetapkan 30 Desember 2025, berlaku 1 Januari 2026",
+      "ump_source": "https://drive.google.com/file/d/1kk6QYHKjafzOgG6s5lyV5dd_k46bqCaC/view",
+      "umk_sk": "Kota Banda Aceh: Kepgub Aceh 500.15.14.1/1495/2025 (31 Des 2025); Kabupaten Aceh Tamiang: Kepgub Aceh 500.15.14.1/126/2026 (27 Feb 2026, berlaku surut 1 Jan 2026)",
+      "umk_source": "https://drive.google.com/drive/folders/1XkO_TMaSOeXcmw8s-Df0CAwXNzfwmDDs",
+      "umk_source_2": "https://data.goodstats.id/statistic/daftar-umk-aceh-2026-kota-banda-aceh-naik-6-k5blv",
+      "umk": [
+        {
+          "wilayah": "Kota Banda Aceh",
+          "nilai": 4162965
+        },
+        {
+          "wilayah": "Kabupaten Aceh Tamiang",
+          "nilai": 3978204
+        }
+      ],
+      "ikut_ump": [
+        "Kabupaten Aceh Barat",
+        "Kabupaten Aceh Barat Daya",
+        "Kabupaten Aceh Besar",
+        "Kabupaten Aceh Jaya",
+        "Kabupaten Aceh Selatan",
+        "Kabupaten Aceh Singkil",
+        "Kabupaten Aceh Tengah",
+        "Kabupaten Aceh Tenggara",
+        "Kabupaten Aceh Timur",
+        "Kabupaten Aceh Utara",
+        "Kabupaten Bener Meriah",
+        "Kabupaten Bireuen",
+        "Kabupaten Gayo Lues",
+        "Kabupaten Nagan Raya",
+        "Kabupaten Pidie",
+        "Kabupaten Pidie Jaya",
+        "Kabupaten Simeulue",
+        "Kota Langsa",
+        "Kota Lhokseumawe",
+        "Kota Sabang",
+        "Kota Subulussalam"
+      ],
+      "jumlah_kabkota_resmi": 23,
+      "catatan": "UMP & 2 UMK dibaca dari scan Kepgub bertanda tangan (folder Google Drive yang dirujuk GoodStats). UMP cocok dengan metrotvnews & GNFI. Hanya Banda Aceh & Aceh Tamiang yang menetapkan UMK; 21 lainnya memakai UMP (GoodStats, 9 Mar 2026). UMK Aceh Tamiang ditandatangani 27 Feb 2026 dan berlaku surut 1 Jan 2026.",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Sumatera Utara",
+      "ump": 3228971,
+      "ump_sk": "Keputusan Gubernur Sumatera Utara Nomor 188.44/896/KPTS/2025 (nomor dari GoodStats)",
+      "ump_source": "https://www.cnbcindonesia.com/news/20251222151601-4-696334/tok-bobby-putuskan-ump-sumatra-utara-naik-79-kasih-pesan-begini",
+      "umk_sk": "Keputusan Gubernur Sumatera Utara Nomor 188.44/908/KPTS/2025, ditetapkan 24 Desember 2025, berlaku 1 Januari 2026",
+      "umk_source": "https://drive.google.com/file/d/1xbOXfeXgXHG09zdTlSs_7mFYVXkJcQxU/view",
+      "umk_source_2": "https://www.detik.com/sumut/berita/d-8278149/daftar-umk-tahun-2026-33-kabupaten-kota-di-sumut-segini-besarannya",
+      "umk": [
+        {
+          "wilayah": "Kabupaten Mandailing Natal",
+          "nilai": 3355900
+        },
+        {
+          "wilayah": "Kabupaten Tapanuli Selatan",
+          "nilai": 3567941
+        },
+        {
+          "wilayah": "Kabupaten Tapanuli Tengah",
+          "nilai": 3509004
+        },
+        {
+          "wilayah": "Kabupaten Tapanuli Utara",
+          "nilai": 3307618
+        },
+        {
+          "wilayah": "Kabupaten Toba",
+          "nilai": 3404422.49
+        },
+        {
+          "wilayah": "Kabupaten Labuhanbatu",
+          "nilai": 3748181
+        },
+        {
+          "wilayah": "Kabupaten Asahan",
+          "nilai": 3531361
+        },
+        {
+          "wilayah": "Kabupaten Simalungun",
+          "nilai": 3351403
+        },
+        {
+          "wilayah": "Kabupaten Karo",
+          "nilai": 3843153
+        },
+        {
+          "wilayah": "Kabupaten Deli Serdang",
+          "nilai": 4041543
+        },
+        {
+          "wilayah": "Kabupaten Langkat",
+          "nilai": 3402892
+        },
+        {
+          "wilayah": "Kabupaten Serdang Bedagai",
+          "nilai": 3605983
+        },
+        {
+          "wilayah": "Kabupaten Batu Bara",
+          "nilai": 3970000
+        },
+        {
+          "wilayah": "Kabupaten Padang Lawas",
+          "nilai": 3478237.41
+        },
+        {
+          "wilayah": "Kabupaten Labuhanbatu Selatan",
+          "nilai": 3690000
+        },
+        {
+          "wilayah": "Kabupaten Labuhanbatu Utara",
+          "nilai": 3603415
+        },
+        {
+          "wilayah": "Kota Sibolga",
+          "nilai": 3668667.5
+        },
+        {
+          "wilayah": "Kota Tanjungbalai",
+          "nilai": 3496856.58
+        },
+        {
+          "wilayah": "Kota Tebing Tinggi",
+          "nilai": 3229957.7
+        },
+        {
+          "wilayah": "Kota Medan",
+          "nilai": 4335198
+        },
+        {
+          "wilayah": "Kota Binjai",
+          "nilai": 3367913.55
+        },
+        {
+          "wilayah": "Kota Padangsidimpuan",
+          "nilai": 3416803
+        }
+      ],
+      "ikut_ump": [
+        "Kabupaten Dairi",
+        "Kabupaten Humbang Hasundutan",
+        "Kabupaten Nias",
+        "Kabupaten Nias Barat",
+        "Kabupaten Nias Selatan",
+        "Kabupaten Nias Utara",
+        "Kabupaten Padang Lawas Utara",
+        "Kabupaten Pakpak Bharat",
+        "Kabupaten Samosir",
+        "Kota Gunungsitoli",
+        "Kota Pematangsiantar"
+      ],
+      "jumlah_kabkota_resmi": 33,
+      "catatan": "22 UMK dari Lampiran scan Kepgub 188.44/908/KPTS/2025 (salinan sesuai aslinya, Biro Hukum), cocok digit demi digit dengan detik.com & fahum.umsu.ac.id. 11 kab/kota tanpa Dewan Pengupahan memakai UMP. GoodStats salah ketik Mandailing Natal (Rp3.555.900); SK: Rp3.355.900. UMP dikonfirmasi CNBC, Metro TV, detik, Hukumonline.",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Sumatera Barat",
+      "ump": 3182955,
+      "ump_sk": "Keputusan Gubernur Sumatera Barat Nomor 562-851-2025 (diumumkan sumbarprov.go.id 22 Desember 2025), berlaku 1 Januari 2026",
+      "ump_source": "https://www.cnbcindonesia.com/news/20251223133305-4-696671/tok-ump-sumbar-2026-resmi-naik-63-upah-minimum-sektoral-segini",
+      "umk_sk": null,
+      "umk_source": "https://data.goodstats.id/statistic/daftar-umk-sumatra-barat-2026-semua-daerah-gunakan-ump-98PB7",
+      "umk_source_2": "https://sumbarprov.go.id/home/index-berita/285",
+      "umk": [],
+      "ikut_ump": [
+        "Kabupaten Agam",
+        "Kabupaten Dharmasraya",
+        "Kabupaten Kepulauan Mentawai",
+        "Kabupaten Lima Puluh Kota",
+        "Kabupaten Padang Pariaman",
+        "Kabupaten Pasaman",
+        "Kabupaten Pasaman Barat",
+        "Kabupaten Pesisir Selatan",
+        "Kabupaten Sijunjung",
+        "Kabupaten Solok",
+        "Kabupaten Solok Selatan",
+        "Kabupaten Tanah Datar",
+        "Kota Bukittinggi",
+        "Kota Padang",
+        "Kota Padang Panjang",
+        "Kota Pariaman",
+        "Kota Payakumbuh",
+        "Kota Sawahlunto",
+        "Kota Solok"
+      ],
+      "jumlah_kabkota_resmi": 19,
+      "catatan": "Tidak ada kab/kota di Sumbar yang menetapkan UMK 2026; seluruhnya memakai UMP (GoodStats, Dealls; situs Pemprov hanya memuat Kepgub UMP 562-851-2025 & UMSP 562-853-2025). UMP cocok di CNBC, Metro TV, GoodStats, Hukumonline (PDF SK terkunci).",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Riau",
+      "ump": 3780495.85,
+      "ump_sk": null,
+      "ump_source": "https://mediacenter.riau.go.id/arsip/94797",
+      "umk_sk": "Keputusan Gubernur Riau Nomor Kpts.1164/XII/2025, ditetapkan 23 Desember 2025, berlaku 1 Januari 2026",
+      "umk_source": "https://drive.google.com/file/d/1gsXw8uMJcEi712XiwSphCFNcmR59CCZI/view",
+      "umk_source_2": "https://mediacenter.riau.go.id/arsip/94797",
+      "umk": [
+        {
+          "wilayah": "Kota Dumai",
+          "nilai": 4431174.69
+        },
+        {
+          "wilayah": "Kabupaten Bengkalis",
+          "nilai": 4155317.75
+        },
+        {
+          "wilayah": "Kabupaten Siak",
+          "nilai": 4001327.33
+        },
+        {
+          "wilayah": "Kota Pekanbaru",
+          "nilai": 3998179.46
+        },
+        {
+          "wilayah": "Kabupaten Indragiri Hulu",
+          "nilai": 3988406.32
+        },
+        {
+          "wilayah": "Kabupaten Kuantan Singingi",
+          "nilai": 3949466.98
+        },
+        {
+          "wilayah": "Kabupaten Kampar",
+          "nilai": 3898210.7
+        },
+        {
+          "wilayah": "Kabupaten Pelalawan",
+          "nilai": 3894260.59
+        },
+        {
+          "wilayah": "Kabupaten Rokan Hulu",
+          "nilai": 3819353.01
+        },
+        {
+          "wilayah": "Kabupaten Rokan Hilir",
+          "nilai": 3783052.9
+        }
+      ],
+      "ikut_ump": [
+        "Kabupaten Kepulauan Meranti",
+        "Kabupaten Indragiri Hilir"
+      ],
+      "jumlah_kabkota_resmi": 12,
+      "catatan": "Nilai dari Lampiran scan SK Kpts.1164/XII/2025. Diktum KETIGA: Kepulauan Meranti & Indragiri Hilir memakai UMP. Rilis Pemprov & media menulis Kampar Rp3.898.260,70, Indragiri Hulu ,31, Pelalawan ,58; SK (dokumen mengikat) menulis Kampar Rp3.898.210,70, Indragiri Hulu ,32, Pelalawan ,59 — dipakai nilai SK (GoodStats Kampar Rp3.898.211 juga cocok SK). Nomor SK UMP tidak ditemukan.",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Kepulauan Riau",
+      "ump": 3879520,
+      "ump_sk": "Keputusan Gubernur Kepulauan Riau Nomor 1327 Tahun 2025",
+      "ump_source": "https://www.kepriprov.go.id/siaran-pers/832-rilis-diskominfo-xii-2025",
+      "umk_sk": "Satu Kepgub per kab/kota, Nomor 1331–1337 Tahun 2025 (Kota Batam: Nomor 1331 Tahun 2025, 23 Desember 2025)",
+      "umk_source": "https://www.kepriprov.go.id/siaran-pers/832-rilis-diskominfo-xii-2025",
+      "umk_source_2": "https://disnaker.batam.go.id/wp-content/uploads/sites/36/2025/12/SK-UMK-BATAM-TAHUN-2026.pdf",
+      "umk": [
+        {
+          "wilayah": "Kota Batam",
+          "nilai": 5357982
+        },
+        {
+          "wilayah": "Kabupaten Bintan",
+          "nilai": 4583221
+        },
+        {
+          "wilayah": "Kabupaten Kepulauan Anambas",
+          "nilai": 4279851
+        },
+        {
+          "wilayah": "Kabupaten Karimun",
+          "nilai": 4241935
+        },
+        {
+          "wilayah": "Kota Tanjungpinang",
+          "nilai": 3879520
+        },
+        {
+          "wilayah": "Kabupaten Lingga",
+          "nilai": 3879520
+        },
+        {
+          "wilayah": "Kabupaten Natuna",
+          "nilai": 3879520
+        }
+      ],
+      "ikut_ump": [],
+      "jumlah_kabkota_resmi": 7,
+      "catatan": "Rilis resmi Pemprov Kepri 24 Des 2025: ketujuh kab/kota mendapat Kepgub UMK sendiri; Tanjungpinang, Lingga, Natuna ditetapkan sama dengan UMP (Rp3.879.520). Cocok dengan GoodStats, GNFI, Databoks. Hanya SK Batam yang dibaca langsung.",
+      "asal_data": "riset"
+    },
+    {
+      "provinsi": "Bengkulu",
+      "ump": 2827250,
+      "ump_sk": "Kepgub Bengkulu K.646 DKKTRANS. Tahun 2025",
+      "ump_source": "https://panduanwarga.org/data/upah-minimum-provinsi-2026.csv",
+      "umk_sk": "Keputusan Gubernur Bengkulu No. K.647.DKKTRANS Tahun 2025 tentang Upah Minimum Kabupaten/Kota di Provinsi Bengkulu Tahun 2026",
+      "umk_source": "https://www.ptgasi.co.id/wp-content/uploads/2025/12/DAFTAR-UMK-TAHUN-2026.pdf",
+      "umk_source_2": null,
+      "umk": [
+        {
+          "wilayah": "Kabupaten Bengkulu Tengah",
+          "nilai": 2945142.2
+        },
+        {
+          "wilayah": "Kabupaten Bengkulu Utara",
+          "nilai": 2906158.92
+        },
+        {
+          "wilayah": "Kabupaten Mukomuko",
+          "nilai": 3217086
+        },
+        {
+          "wilayah": "Kabupaten Rejang Lebong",
+          "nilai": 2841749.59
+        },
+        {
+          "wilayah": "Kota Bengkulu",
+          "nilai": 3089218.66
+        }
+      ],
+      "ikut_ump": [
+        "Kabupaten Bengkulu Selatan",
+        "Kabupaten Kaur",
+        "Kabupaten Kepahiang",
+        "Kabupaten Lebong",
+        "Kabupaten Seluma"
+      ],
+      "jumlah_kabkota_resmi": 10,
+      "catatan": "Dari UMP_UMK_Indonesia_2026_Revisi.xlsx (kompilasi Nafkah & Panduan Warga, CC BY 4.0, dikoreksi dengan keputusan/pengumuman pemerintah; diperiksa 4 Okt 2026). UMP cocok dengan daftar 38 provinsi detikFinance/Kemnaker. Daftar UMK dari PDF perusahaan (ptgasi.co.id) yang mengutip Kepgub K.647.DKKTRANS 2025.",
+      "asal_data": "file pengguna"
+    },
+    {
+      "provinsi": "Jambi",
+      "ump": 3471497,
+      "ump_sk": "Data Kemnaker",
+      "ump_source": "https://panduanwarga.org/data/upah-minimum-provinsi-2026.csv",
+      "umk_sk": "Keputusan Gubernur Jambi Tahun 2025 tentang UMK Kabupaten/Kota Tahun 2026",
+      "umk_source": "https://github.com/adenaufal/nafkah/blob/main/public/data/v2026.1/wages.json",
+      "umk_source_2": null,
+      "umk": [
+        {
+          "wilayah": "Kabupaten Muaro Jambi",
+          "nilai": 3651917
+        },
+        {
+          "wilayah": "Kabupaten Sarolangun",
+          "nilai": 3533562
+        },
+        {
+          "wilayah": "Kabupaten Tanjung Jabung Barat",
+          "nilai": 3551430
+        },
+        {
+          "wilayah": "Kabupaten Tanjung Jabung Timur",
+          "nilai": 3486521
+        },
+        {
+          "wilayah": "Kota Jambi",
+          "nilai": 3868963
+        }
+      ],
+      "ikut_ump": [
+        "Kabupaten Batang Hari",
+        "Kabupaten Bungo",
+        "Kabupaten Kerinci",
+        "Kabupaten Merangin",
+        "Kabupaten Tebo",
+        "Kota Sungai Penuh"
+      ],
+      "jumlah_kabkota_resmi": 11,
+      "catatan": "Dari UMP_UMK_Indonesia_2026_Revisi.xlsx (kompilasi Nafkah & Panduan Warga, CC BY 4.0, dikoreksi dengan keputusan/pengumuman pemerintah; diperiksa 4 Okt 2026). UMP cocok dengan daftar 38 provinsi detikFinance/Kemnaker.",
+      "asal_data": "file pengguna"
+    },
+    {
+      "provinsi": "Kepulauan Bangka Belitung",
+      "ump": 4035000,
+      "ump_sk": "Pengumuman Disnaker Babel",
+      "ump_source": "https://panduanwarga.org/data/upah-minimum-provinsi-2026.csv",
+      "umk_sk": null,
+      "umk_source": null,
+      "umk_source_2": null,
+      "umk": [],
+      "ikut_ump": [
+        "Kabupaten Bangka",
+        "Kabupaten Bangka Barat",
+        "Kabupaten Bangka Selatan",
+        "Kabupaten Bangka Tengah",
+        "Kabupaten Belitung",
+        "Kabupaten Belitung Timur",
+        "Kota Pangkalpinang"
+      ],
+      "jumlah_kabkota_resmi": 7,
+      "catatan": "Dari UMP_UMK_Indonesia_2026_Revisi.xlsx (kompilasi Nafkah & Panduan Warga, CC BY 4.0, dikoreksi dengan keputusan/pengumuman pemerintah; diperiksa 4 Okt 2026). UMP cocok dengan daftar 38 provinsi detikFinance/Kemnaker.",
+      "asal_data": "file pengguna"
+    },
+    {
+      "provinsi": "Lampung",
+      "ump": 3047734,
+      "ump_sk": "Kepgub Lampung G/865/V.08/HK/2025",
+      "ump_source": "https://panduanwarga.org/data/upah-minimum-provinsi-2026.csv",
+      "umk_sk": "Keputusan Gubernur Lampung Tahun 2025 tentang UMK Kabupaten/Kota Tahun 2026",
+      "umk_source": "https://github.com/adenaufal/nafkah/blob/main/public/data/v2026.1/wages.json",
+      "umk_source_2": null,
+      "umk": [
+        {
+          "wilayah": "Kabupaten Lampung Selatan",
+          "nilai": 3219609
+        },
+        {
+          "wilayah": "Kabupaten Mesuji",
+          "nilai": 3227333
+        },
+        {
+          "wilayah": "Kabupaten Way Kanan",
+          "nilai": 3215764
+        },
+        {
+          "wilayah": "Kota Bandar Lampung",
+          "nilai": 3491889
+        },
+        {
+          "wilayah": "Kota Metro",
+          "nilai": 3050498
+        }
+      ],
+      "ikut_ump": [
+        "Kabupaten Lampung Barat",
+        "Kabupaten Lampung Tengah",
+        "Kabupaten Lampung Timur",
+        "Kabupaten Lampung Utara",
+        "Kabupaten Pesawaran",
+        "Kabupaten Pesisir Barat",
+        "Kabupaten Pringsewu",
+        "Kabupaten Tanggamus",
+        "Kabupaten Tulang Bawang",
+        "Kabupaten Tulang Bawang Barat"
+      ],
+      "jumlah_kabkota_resmi": 15,
+      "catatan": "Dari UMP_UMK_Indonesia_2026_Revisi.xlsx (kompilasi Nafkah & Panduan Warga, CC BY 4.0, dikoreksi dengan keputusan/pengumuman pemerintah; diperiksa 4 Okt 2026). UMP cocok dengan daftar 38 provinsi detikFinance/Kemnaker. File sumber memuat \"Kabupaten Tulang Bawang\" dan \"Kabupaten Tulangbawang\" (ganda) tanpa Tulang Bawang Barat; baris kedua dinamai Kabupaten Tulang Bawang Barat (ikut UMP).",
+      "asal_data": "file pengguna"
+    },
+    {
+      "provinsi": "Maluku",
+      "ump": 3334490,
+      "ump_sk": "Data Kemnaker",
+      "ump_source": "https://panduanwarga.org/data/upah-minimum-provinsi-2026.csv",
+      "umk_sk": "SK Gubernur Maluku No. 5434 Tahun 2025 tentang Upah Minimum Kabupaten/Kota di Provinsi Maluku Tahun 2026",
+      "umk_source": "https://github.com/adenaufal/nafkah/blob/main/public/data/v2026.1/wages.json",
+      "umk_source_2": null,
+      "umk": [
+        {
+          "wilayah": "Kota Ambon",
+          "nilai": 3381225
+        }
+      ],
+      "ikut_ump": [
+        "Kabupaten Buru",
+        "Kabupaten Buru Selatan",
+        "Kabupaten Kepulauan Aru",
+        "Kabupaten Kepulauan Tanimbar",
+        "Kabupaten Maluku Barat Daya",
+        "Kabupaten Maluku Tengah",
+        "Kabupaten Maluku Tenggara",
+        "Kabupaten Seram Bagian Barat",
+        "Kabupaten Seram Bagian Timur",
+        "Kota Tual"
+      ],
+      "jumlah_kabkota_resmi": 11,
+      "catatan": "Dari UMP_UMK_Indonesia_2026_Revisi.xlsx (kompilasi Nafkah & Panduan Warga, CC BY 4.0, dikoreksi dengan keputusan/pengumuman pemerintah; diperiksa 4 Okt 2026). UMP cocok dengan daftar 38 provinsi detikFinance/Kemnaker.",
+      "asal_data": "file pengguna"
+    },
+    {
+      "provinsi": "Maluku Utara",
+      "ump": 3510240,
+      "ump_sk": "Data Kemnaker",
+      "ump_source": "https://panduanwarga.org/data/upah-minimum-provinsi-2026.csv",
+      "umk_sk": "SK Gubernur Maluku Utara Tahun 2025 tentang UMK Kota Ternate Tahun 2026",
+      "umk_source": "https://github.com/adenaufal/nafkah/blob/main/public/data/v2026.1/wages.json",
+      "umk_source_2": null,
+      "umk": [
+        {
+          "wilayah": "Kota Ternate",
+          "nilai": 3599562
+        }
+      ],
+      "ikut_ump": [
+        "Kabupaten Halmahera Barat",
+        "Kabupaten Halmahera Selatan",
+        "Kabupaten Halmahera Tengah",
+        "Kabupaten Halmahera Timur",
+        "Kabupaten Halmahera Utara",
+        "Kabupaten Kepulauan Sula",
+        "Kabupaten Pulau Morotai",
+        "Kabupaten Pulau Taliabu",
+        "Kota Tidore Kepulauan"
+      ],
+      "jumlah_kabkota_resmi": 10,
+      "catatan": "Dari UMP_UMK_Indonesia_2026_Revisi.xlsx (kompilasi Nafkah & Panduan Warga, CC BY 4.0, dikoreksi dengan keputusan/pengumuman pemerintah; diperiksa 4 Okt 2026). UMP cocok dengan daftar 38 provinsi detikFinance/Kemnaker.",
+      "asal_data": "file pengguna"
+    },
+    {
+      "provinsi": "Papua",
+      "ump": 4436283,
+      "ump_sk": "Kepgub Papua 100.3.3.1/KEP.409/2025",
+      "ump_source": "https://panduanwarga.org/data/upah-minimum-provinsi-2026.csv",
+      "umk_sk": null,
+      "umk_source": null,
+      "umk_source_2": null,
+      "umk": [],
+      "ikut_ump": [
+        "Kabupaten Biak Numfor",
+        "Kabupaten Jayapura",
+        "Kabupaten Keerom",
+        "Kabupaten Kepulauan Yapen",
+        "Kabupaten Mamberamo Raya",
+        "Kabupaten Sarmi",
+        "Kabupaten Supiori",
+        "Kabupaten Waropen",
+        "Kota Jayapura"
+      ],
+      "jumlah_kabkota_resmi": 9,
+      "catatan": "Dari UMP_UMK_Indonesia_2026_Revisi.xlsx (kompilasi Nafkah & Panduan Warga, CC BY 4.0, dikoreksi dengan keputusan/pengumuman pemerintah; diperiksa 4 Okt 2026). UMP cocok dengan daftar 38 provinsi detikFinance/Kemnaker.",
+      "asal_data": "file pengguna"
+    },
+    {
+      "provinsi": "Papua Barat",
+      "ump": 3841000,
+      "ump_sk": "Kepgub Papua Barat 343/2025",
+      "ump_source": "https://panduanwarga.org/data/upah-minimum-provinsi-2026.csv",
+      "umk_sk": null,
+      "umk_source": null,
+      "umk_source_2": null,
+      "umk": [],
+      "ikut_ump": [
+        "Kabupaten Fakfak",
+        "Kabupaten Kaimana",
+        "Kabupaten Manokwari",
+        "Kabupaten Manokwari Selatan",
+        "Kabupaten Pegunungan Arfak",
+        "Kabupaten Teluk Bintuni",
+        "Kabupaten Teluk Wondama"
+      ],
+      "jumlah_kabkota_resmi": 7,
+      "catatan": "Dari UMP_UMK_Indonesia_2026_Revisi.xlsx (kompilasi Nafkah & Panduan Warga, CC BY 4.0, dikoreksi dengan keputusan/pengumuman pemerintah; diperiksa 4 Okt 2026). UMP cocok dengan daftar 38 provinsi detikFinance/Kemnaker.",
+      "asal_data": "file pengguna"
+    },
+    {
+      "provinsi": "Papua Barat Daya",
+      "ump": 3766000,
+      "ump_sk": "Data Kemnaker",
+      "ump_source": "https://panduanwarga.org/data/upah-minimum-provinsi-2026.csv",
+      "umk_sk": null,
+      "umk_source": null,
+      "umk_source_2": null,
+      "umk": [],
+      "ikut_ump": [
+        "Kabupaten Maybrat",
+        "Kabupaten Raja Ampat",
+        "Kabupaten Sorong",
+        "Kabupaten Sorong Selatan",
+        "Kabupaten Tambrauw",
+        "Kota Sorong"
+      ],
+      "jumlah_kabkota_resmi": 6,
+      "catatan": "Dari UMP_UMK_Indonesia_2026_Revisi.xlsx (kompilasi Nafkah & Panduan Warga, CC BY 4.0, dikoreksi dengan keputusan/pengumuman pemerintah; diperiksa 4 Okt 2026). UMP cocok dengan daftar 38 provinsi detikFinance/Kemnaker.",
+      "asal_data": "file pengguna"
+    },
+    {
+      "provinsi": "Papua Pegunungan",
+      "ump": 4508714,
+      "ump_sk": "Data Kemnaker",
+      "ump_source": "https://panduanwarga.org/data/upah-minimum-provinsi-2026.csv",
+      "umk_sk": null,
+      "umk_source": null,
+      "umk_source_2": null,
+      "umk": [],
+      "ikut_ump": [
+        "Kabupaten Jayawijaya",
+        "Kabupaten Lanny Jaya",
+        "Kabupaten Mamberamo Tengah",
+        "Kabupaten Nduga",
+        "Kabupaten Pegunungan Bintang",
+        "Kabupaten Tolikara",
+        "Kabupaten Yahukimo",
+        "Kabupaten Yalimo"
+      ],
+      "jumlah_kabkota_resmi": 8,
+      "catatan": "Dari UMP_UMK_Indonesia_2026_Revisi.xlsx (kompilasi Nafkah & Panduan Warga, CC BY 4.0, dikoreksi dengan keputusan/pengumuman pemerintah; diperiksa 4 Okt 2026). UMP cocok dengan daftar 38 provinsi detikFinance/Kemnaker.",
+      "asal_data": "file pengguna"
+    },
+    {
+      "provinsi": "Papua Selatan",
+      "ump": 4508100,
+      "ump_sk": "Data Kemnaker",
+      "ump_source": "https://panduanwarga.org/data/upah-minimum-provinsi-2026.csv",
+      "umk_sk": null,
+      "umk_source": null,
+      "umk_source_2": null,
+      "umk": [],
+      "ikut_ump": [
+        "Kabupaten Asmat",
+        "Kabupaten Boven Digoel",
+        "Kabupaten Mappi",
+        "Kabupaten Merauke"
+      ],
+      "jumlah_kabkota_resmi": 4,
+      "catatan": "Dari UMP_UMK_Indonesia_2026_Revisi.xlsx (kompilasi Nafkah & Panduan Warga, CC BY 4.0, dikoreksi dengan keputusan/pengumuman pemerintah; diperiksa 4 Okt 2026). UMP cocok dengan daftar 38 provinsi detikFinance/Kemnaker.",
+      "asal_data": "file pengguna"
+    },
+    {
+      "provinsi": "Papua Tengah",
+      "ump": 4285848,
+      "ump_sk": "Kepgub Papua Tengah 100.3.3.1/334 Tahun 2025",
+      "ump_source": "https://panduanwarga.org/data/upah-minimum-provinsi-2026.csv",
+      "umk_sk": "Kepgub Papua Tengah 100.3.3.1/337 Tahun 2025",
+      "umk_source": "https://data.goodstats.id/statistic/simak-daftar-umk-papua-tengah-2026-FNgL2",
+      "umk_source_2": null,
+      "umk": [
+        {
+          "wilayah": "Kabupaten Mimika",
+          "nilai": 5005678
+        }
+      ],
+      "ikut_ump": [
+        "Kabupaten Deiyai",
+        "Kabupaten Dogiyai",
+        "Kabupaten Intan Jaya",
+        "Kabupaten Nabire",
+        "Kabupaten Paniai",
+        "Kabupaten Puncak",
+        "Kabupaten Puncak Jaya"
+      ],
+      "jumlah_kabkota_resmi": 8,
+      "catatan": "Dari UMP_UMK_Indonesia_2026_Revisi.xlsx (kompilasi Nafkah & Panduan Warga, CC BY 4.0, dikoreksi dengan keputusan/pengumuman pemerintah; diperiksa 4 Okt 2026). UMP cocok dengan daftar 38 provinsi detikFinance/Kemnaker. UMK Mimika 2026 sama dengan 2025 (Kepgub 100.3.3.1/337/2025).",
+      "asal_data": "file pengguna"
+    },
+    {
+      "provinsi": "Sumatera Selatan",
+      "ump": 3942963,
+      "ump_sk": "Kepgub Sumsel 963/KPTS/DISNAKERTRANS/2025",
+      "ump_source": "https://panduanwarga.org/data/upah-minimum-provinsi-2026.csv",
+      "umk_sk": "SK Gubernur Sumatera Selatan (Kepgub No. 987/KPTS/Disnakertrans/2025 untuk Musi Rawas; ditetapkan serentak 24 Des 2025) tentang Upah Minimum Kabupaten/Kota di Provinsi Sumatera Selatan Tahun 2026",
+      "umk_source": "https://github.com/adenaufal/nafkah/blob/main/public/data/v2026.1/wages.json",
+      "umk_source_2": null,
+      "umk": [
+        {
+          "wilayah": "Kabupaten Banyuasin",
+          "nilai": 3976492
+        },
+        {
+          "wilayah": "Kabupaten Lahat",
+          "nilai": 4041420
+        },
+        {
+          "wilayah": "Kabupaten Muara Enim",
+          "nilai": 4178363
+        },
+        {
+          "wilayah": "Kabupaten Musi Banyuasin",
+          "nilai": 4039054
+        },
+        {
+          "wilayah": "Kabupaten Musi Rawas",
+          "nilai": 4058812
+        },
+        {
+          "wilayah": "Kabupaten Musi Rawas Utara",
+          "nilai": 4047385
+        },
+        {
+          "wilayah": "Kabupaten Ogan Komering Ulu Timur",
+          "nilai": 3993876
+        },
+        {
+          "wilayah": "Kota Palembang",
+          "nilai": 4192837
+        }
+      ],
+      "ikut_ump": [
+        "Kabupaten Empat Lawang",
+        "Kabupaten Ogan Ilir",
+        "Kabupaten Ogan Komering Ilir",
+        "Kabupaten Ogan Komering Ulu",
+        "Kabupaten Ogan Komering Ulu Selatan",
+        "Kabupaten Penukal Abab Lematang Ilir",
+        "Kota Lubuklinggau",
+        "Kota Pagar Alam",
+        "Kota Prabumulih"
+      ],
+      "jumlah_kabkota_resmi": 17,
+      "catatan": "Dari UMP_UMK_Indonesia_2026_Revisi.xlsx (kompilasi Nafkah & Panduan Warga, CC BY 4.0, dikoreksi dengan keputusan/pengumuman pemerintah; diperiksa 4 Okt 2026). UMP cocok dengan daftar 38 provinsi detikFinance/Kemnaker.",
+      "asal_data": "file pengguna"
+    }
+  ]
+}

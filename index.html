@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f0f3f2" id="themeColor">
+  <title>Life Calculator</title>
+  <meta name="description" content="12 kalkulator gratis: gaji bersih PPh 21 TER & BPJS 2026, nilai waktu, UMR/UMK, FIRE, cicilan KPR, tabungan, dana darurat, dana pendidikan, inflasi, zakat, pesangon, dan hidup dalam minggu.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/icons/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Life Calc">
+  <meta property="og:title" content="Life Calculator">
+  <meta property="og:description" content="Gaji bersih, FIRE, cicilan, zakat, pesangon & lainnya — dihitung di perangkatmu.">
+  <meta property="og:image" content="assets/icons/icon-512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/app.css">
+  <!-- Data & rumus murni (juga diuji di test/) -->
+  <script defer src="js/data/tarif.js"></script>
+  <script defer src="js/data/upah-minimum.js"></script>
+  <script defer src="js/engine/karier.js"></script>
+  <script defer src="js/engine/fire.js"></script>
+  <script defer src="js/engine/pesangon.js"></script>
+  <script defer src="js/engine/tabungan.js"></script>
+  <script defer src="js/engine/pendidikan.js"></script>
+  <script defer src="js/engine/darurat.js"></script>
+  <script defer src="js/engine/cicilan.js"></script>
+  <script defer src="js/engine/inflasi.js"></script>
+  <script defer src="js/engine/zakat.js"></script>
+  <script defer src="js/engine/minggu.js"></script>
+  <!-- Inti aplikasi, lalu tiap kalkulator mendaftarkan dirinya -->
+  <script defer src="js/app.js"></script>
+  <script defer src="js/calc/karier.js"></script>
+  <script defer src="js/calc/pesangon.js"></script>
+  <script defer src="js/calc/fire.js"></script>
+  <script defer src="js/calc/tabungan.js"></script>
+  <script defer src="js/calc/pendidikan.js"></script>
+  <script defer src="js/calc/darurat.js"></script>
+  <script defer src="js/calc/cicilan.js"></script>
+  <script defer src="js/calc/inflasi.js"></script>
+  <script defer src="js/calc/zakat.js"></script>
+  <script defer src="js/calc/minggu.js"></script>
+  <script defer src="js/pages.js"></script>
+</head>
+<body>
+  <div class="app" id="app">
+    <aside class="sidebar" id="sidebar"></aside>
+    <main class="main" id="main">
+      <div class="boot" id="boot" aria-busy="true">
+        <div class="skel" style="height:56px"></div>
+        <div class="skel" style="height:128px"></div>
+        <div class="skel" style="height:68px"></div>
+        <div class="skel" style="height:64px"></div>
+      </div>
+      <section class="view" id="view" aria-live="off"></section>
+      <noscript><p style="padding:24px">Life Calculator butuh JavaScript untuk menghitung.</p></noscript>
+    </main>
+    <nav class="bottom-nav" id="bottomNav" aria-label="Navigasi utama"></nav>
+  </div>
+  <div id="layer"></div>
+  <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+</body>
+</html>

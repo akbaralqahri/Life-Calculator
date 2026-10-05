@@ -1,0 +1,7 @@
+# Hanya file aplikasi yang diunggah ke Vercel
+test/
+tools/
+data/
+.claude/
+README.md
+package.json

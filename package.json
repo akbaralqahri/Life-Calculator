@@ -1,0 +1,15 @@
+{
+  "name": "life-calculator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Life Calculator — 12 kalkulator (gaji bersih, FIRE, cicilan, zakat, pesangon, dll.). HTML/CSS/JS murni, siap deploy ke Vercel sebagai situs statis.",
+  "scripts": {
+    "dev": "node tools/dev-server.js",
+    "test": "node --test \"test/*.test.js\"",
+    "wages": "node tools/build-wages.js",
+    "icons": "node tools/build-icons.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
