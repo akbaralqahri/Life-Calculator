@@ -40,3 +40,20 @@ test('ikon PNG sama dengan hasil render logo di js/app.js (jalankan npm run icon
   assert.equal(p.px[3], 0);
   assert.equal(p.px[(96 * 192 + 96) * 4 + 3], 255);
 });
+
+test('.vercelignore tidak membuang file aplikasi (pola tanpa "/" di depan berlaku di semua folder)', () => {
+  const sw = read('sw.js');
+  const core = JSON.parse('[' + /const CORE = \[([\s\S]*?)\];/.exec(sw)[1].replace(/'/g, '"').replace(/,\s*$/, '') + ']').filter((f) => f !== './');
+  const files = core.concat(['sw.js', 'vercel.json', 'assets/icons/apple-touch-icon.png', 'assets/icons/icon-maskable-512.png']);
+  const rules = read('.vercelignore').split(/\r?\n/).map((l) => l.trim()).filter((l) => l && !l.startsWith('#'));
+  // pencocokan ala .gitignore: "/x/" = folder x di root; "x/" = folder bernama x di level mana pun
+  const ignored = (f) => rules.some((r) => {
+    const anchored = r.startsWith('/');
+    const dir = r.endsWith('/');
+    const name = r.replace(/^\//, '').replace(/\/$/, '');
+    const parts = f.split('/');
+    if (anchored) return dir ? f.startsWith(name + '/') : f === name;
+    return dir ? parts.slice(0, -1).includes(name) : parts.includes(name);
+  });
+  files.forEach((f) => assert.ok(!ignored(f), '.vercelignore membuang ' + f));
+});

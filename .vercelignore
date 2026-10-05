@@ -1,7 +1,8 @@
-# Hanya file aplikasi yang diunggah ke Vercel
-test/
-tools/
-data/
-.claude/
-README.md
-package.json
+# Hanya file aplikasi yang diunggah ke Vercel.
+# Pakai "/" di depan: tanpa itu "data/" juga membuang js/data/ (tarif & upah minimum).
+/test/
+/tools/
+/data/
+/.claude/
+/README.md
+/package.json

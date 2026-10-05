@@ -697,8 +697,12 @@ function boot() {
   if (cached) Object.assign(S.prefs, cached, { last: Object.assign({}, cached.last) });
   if (!S.prefs.theme) S.prefs.theme = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   applyTheme();
-  onHash();
   const b = $('#boot');
+  try { onHash(); } catch (e) {
+    // jangan biarkan layar memuat berputar terus: tampilkan penyebabnya
+    if (b) b.outerHTML = '<div class="boot-error"><h1>Aplikasi gagal dimuat</h1><p>Coba muat ulang halaman.</p><p class="hint">' + esc(e && e.message) + '</p></div>';
+    throw e;
+  }
   if (b) b.remove();
   if ('serviceWorker' in navigator && location.protocol === 'https:') {
     window.addEventListener('load', () => { navigator.serviceWorker.register('sw.js').catch(() => {}); });
