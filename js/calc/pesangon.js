@@ -103,7 +103,7 @@ const SEV_KEY_RE = /^\d{4}-\d{2}-\d{2}$/;
 calc({
   id: 'pesangon', icon: 'logOut', color: '#5b6b87', title: 'sevTitle', short: 'sevShort', sub: 'sevSub',
   defaults: {
-    status: 'pkwtt', mulai: '', akhir: '', pakaiGaji: true, upah: 8000000, alasan: 'efCegah',
+    status: 'pkwtt', mulai: '', akhir: '', pakaiGaji: true, upah: 4000000, alasan: 'efCegah',
     cutiHari: 0, hariKerja: 0, biayaPulang: 0, lainUph: 0, uangPisah: 0, pkwtFinal: true
   },
   ui: { all: false },
@@ -198,8 +198,8 @@ function sevView() {
     '<div class="row2">' + fDate('pesangon.mulai', t('sevStartL'), { max: o.akhir }) + fDate('pesangon.akhir', t('sevEndL'), { min: o.mulai }) + '</div>' +
     '<p class="hint' + (R.tenure.valid ? '' : ' warn') + '" data-live="sevTenure" style="margin-top:6px">' +
     esc(R.tenure.valid ? t('sevTenureL', { v: sevTenureText(R.tenure, true) }) : t('sevTenureBad')) + '</p>' +
-    '<div style="margin-top:8px">' + fToggle('pesangon.pakaiGaji', t('sevUseGaji'), esc(t('sevUseGajiSub', { rp: rp(netSalary().upah) })), { live: 'sevUseGaji' }) + '</div>' +
-    (o.pakaiGaji ? '' : fMoney('pesangon.upah', t('sevUpahL'), { hint: esc(t('sevUpahHint')) })) +
+    '<div style="margin-top:8px">' + fToggle('pesangon.pakaiGaji', t('sevUseGaji'), esc(t('sevUseGajiSub', { rp: rp(netSalary().upah) })) + gajiLink(), { live: 'sevUseGaji' }) + '</div>' +
+    (o.pakaiGaji ? '' : fMoney('pesangon.upah', t('sevUpahL'), { hint: esc(t('sevUpahHint')) + ' ' + manualOnlyHint() })) +
     (pkwt ? '<div style="margin-top:4px">' + fToggle('pesangon.pkwtFinal', t('sevPkwtFinal'), esc(t('sevPkwtFinalSub'))) + '</div>' :
       fSelect('pesangon.alasan', t('sevAlasanL'), SEV_REASONS.map((x) => [x.id, L('sevReasons')[x.id]]),
         { hint: esc(t('sevAlasanHint', { p: r.pasal, up: sevMult(r.up), upmk: sevMult(r.upmk), pisah: r.pisah ? t('sevPisahTag') : '' })) })), { order: 2, tight: true });

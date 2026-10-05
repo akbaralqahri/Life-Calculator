@@ -100,7 +100,7 @@ const CICILAN_METHODS = ['anuitas', 'flat', 'efektif'];
 
 calc({
   id: 'cicilan', icon: 'home', color: '#0e7490', title: 'cicTitle', short: 'cicShort', sub: 'cicSub',
-  defaults: Object.assign({ jenis: 'kpr' }, CICILAN_PRESETS.kpr, { extra: 0, useNet: true, income: 15000000 }),
+  defaults: Object.assign({ jenis: 'kpr' }, CICILAN_PRESETS.kpr, { extra: 0, useNet: true, income: 4000000 }),
   ui: { adv: false },
   clean(o) {
     if (!CICILAN_PRESETS[o.jenis]) o.jenis = 'kpr';
@@ -115,6 +115,7 @@ calc({
   },
   onSet(key, v) {
     if (key === 'jenis' && CICILAN_PRESETS[v]) Object.assign(inp('cicilan'), CICILAN_PRESETS[v]);
+    if (key === 'useNet' && !v) inp('cicilan').income = Math.round(netSalary().avgNet); // mulai dari gaji bersih, lalu bisa diubah
   },
   view: cicilanView,
   summary() {
@@ -207,8 +208,8 @@ function cicilanInputHtml(c) {
 function cicilanRatioHtml(c) {
   const s = c.s, b = c.base;
   let h = '<section class="card" style="order:3"><div class="card-title" style="margin-bottom:0"><span>' + esc(t('cicRatioTitle')) + '</span></div>' +
-    '<div style="margin-top:6px">' + fToggle('cicilan.useNet', t('cicUseNet'), esc(t('cicUseNetSub', { rp: rp(netSalary().avgNet) })), { first: true }) + '</div>' +
-    (s.useNet ? '' : fMoney('cicilan.income', t('cicIncome'), { hint: esc(t('cicIncomeHint')) }));
+    '<div style="margin-top:6px">' + fToggle('cicilan.useNet', t('cicUseNet'), esc(t('cicUseNetSub', { rp: rp(netSalary().avgNet) })) + gajiLink(), { first: true }) + '</div>' +
+    (s.useNet ? '' : fMoney('cicilan.income', t('cicIncome'), { hint: esc(t('cicIncomeHint')) + ' ' + manualOnlyHint() }));
   let live;
   if (c.ratio.pct === null) live = '<p class="hint" style="margin-top:10px">' + esc(t('cicNoIncome')) + '</p>';
   else if (!b.monthsToPayoff) live = '<p class="hint" style="margin-top:10px">' + esc(t('cicEmpty')) + '</p>';

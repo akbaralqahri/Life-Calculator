@@ -6,7 +6,7 @@
  * lewat calc({...}); rumus murninya ada di js/engine/*.js (diuji di test/).
  * ===================================================================== */
 
-const APP = { name: 'Life Calculator', version: '1.0.0' };
+const APP = { name: 'Life Calculator', version: '1.0.1' };
 
 /* ============================ IKON (garis, 24×24) ============================ */
 const ICONS = {
@@ -690,6 +690,16 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && $('#layer').innerHTML) closeSheet();
 });
 window.addEventListener('hashchange', onHash);
+// Data diubah di tab/jendela lain (mis. aplikasi terpasang + tab browser): baca ulang & gambar ulang.
+window.addEventListener('storage', (e) => {
+  if (!e.key || e.key.indexOf('lc-') !== 0) return;
+  if (e.key === 'lc-prefs') {
+    const p = store('lc-prefs');
+    if (p) { Object.assign(S.prefs, p); applyTheme(); }
+  } else delete S.data[e.key.slice(3)];
+  renderShell();
+  render();
+});
 
 /* ============================ BOOT ============================ */
 function boot() {

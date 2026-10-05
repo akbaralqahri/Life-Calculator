@@ -119,6 +119,9 @@ Object.assign(I18N.id, {
   habitYears: 'Jika diinvestasikan selama', habitRet: 'Return investasi', habitPerMonth: 'Per bulan', habitPerYear: 'Per tahun',
   habitHours: 'Setara {h} jam kerja setahun', habitHoursSub: '±{d} hari kerja hanya untuk kebiasaan ini',
   habitInvest: 'Bila disisihkan & diinvestasikan {n} tahun', habitInvestSub: 'Total disetor {paid} · hasil investasi {gain}',
+  editInGaji: 'Ubah di Gaji Bersih', fromGajiBase: 'gaji pokok {g} + tunjangan {a}',
+  manualOnly: 'Hanya dipakai di kalkulator ini — kalkulator lain tetap memakai Gaji Bersih ({rp}/bln).',
+  offerOnly: 'Hanya untuk perbandingan — tidak mengubah data di Gaji Bersih.',
   sumYear: 'Setahun {rp}', sumDay: '{rp} per hari kerja', sumCmpPick: 'Isi dua tawaran kerja', sumCmpWin: '{name} unggul {rp}/bln', sumCmpSame: 'Kedua tawaran hampir sama'
 });
 Object.assign(I18N.en, {
@@ -130,6 +133,9 @@ Object.assign(I18N.en, {
   habitYears: 'If invested for', habitRet: 'Investment return', habitPerMonth: 'Per month', habitPerYear: 'Per year',
   habitHours: 'Worth {h} work hours a year', habitHoursSub: '~{d} workdays just for this habit',
   habitInvest: 'Set aside & invested for {n} years', habitInvestSub: 'You put in {paid} · investment growth {gain}',
+  editInGaji: 'Edit in Net Salary', fromGajiBase: 'base {g} + allowance {a}',
+  manualOnly: 'Used by this calculator only — the others keep using Net Salary ({rp}/mo).',
+  offerOnly: 'For comparison only — this does not change your Net Salary details.',
   sumYear: '{rp} a year', sumDay: '{rp} per workday', sumCmpPick: 'Enter two job offers', sumCmpWin: '{name} leads by {rp}/mo', sumCmpSame: 'Both offers are about the same'
 });
 
@@ -139,6 +145,13 @@ const locKey = (v) => (LOC_RE.test(String(v || '')) ? String(v).slice(0, 120) : 
 /** Gaji bersih dari input Gaji Bersih — dipakai kalkulator lain (FIRE, Cicilan, Zakat, …). */
 function netSalary() { return calcSalary(inp('gaji'), TARIF.config, TARIF.ter, TARIF.brackets); }
 /** Nilai waktu (per jam/menit/hari) dari gaji bersih rata-rata & jam kerja. */
+/** Keterangan sumber + tautan ke Gaji Bersih, untuk sakelar "Pakai gaji bersih" di kalkulator lain. */
+function gajiLink() {
+  const g = inp('gaji');
+  return '<br>' + esc(t('fromGajiBase', { g: rp(g.gaji), a: rp(g.tunjangan) })) + ' · <button type="button" class="link-btn inline-link" data-act="nav" data-v="gaji">' + esc(t('editInGaji')) + '</button>';
+}
+/** Catatan di bawah isian manual: kalkulator lain tidak ikut berubah. */
+function manualOnlyHint() { return esc(t('manualOnly', { rp: rp(netSalary().avgNet) })); }
 function timeValue() { const w = inp('waktu'); return calcTime(netSalary().avgNet, w.jamKerja, w.hariKerja); }
 let WAGES = null;
 function wages() { return WAGES || (WAGES = wageIndex(WAGE_DATA)); }
@@ -179,7 +192,7 @@ HOOKS.change.push((el) => {
 const JKK_KEYS = ['SANGAT_RENDAH', 'RENDAH', 'SEDANG', 'TINGGI', 'SANGAT_TINGGI'];
 calc({
   id: 'gaji', icon: 'wallet', color: '#0b776b', title: 'gajiTitle', short: 'gajiShort', sub: 'gajiSub',
-  defaults: { gaji: 8000000, tunjangan: 1500000, tidakTetap: 0, thr: 0, ptkp: 'TK/0', kes: true, jht: true, jp: true, jkk: 'SANGAT_RENDAH', dtp: false, lokasi: '', lokasiBanding: '' },
+  defaults: { gaji: 3500000, tunjangan: 500000, tidakTetap: 0, thr: 0, ptkp: 'TK/0', kes: true, jht: true, jp: true, jkk: 'SANGAT_RENDAH', dtp: false, lokasi: '', lokasiBanding: '' },
   ui: { adv: false, employer: false },
   clean(o) {
     ['gaji', 'tunjangan', 'tidakTetap', 'thr'].forEach((k) => { o[k] = clamp(Math.round(o[k]), 0, 999999999999); });
@@ -386,7 +399,7 @@ function cmpView() {
     '<p class="hint" style="margin-top:8px">' + esc(t('cmpNote')) + '</p></section>';
   offers.forEach((o, i) => {
     html += '<section class="card" style="order:' + (i + 2) + '"><div class="card-title" style="margin-bottom:0"><span data-live="offer' + i + '">' + esc(offerName(i)) + '</span><small>' + (i ? 'B' : 'A') + '</small></div>' +
-      fText('bandingkan.tawaran.' + i + '.nama', t('offerName'), { max: 30 }) + locPicker('bandingkan.tawaran.' + i + '.lokasi', t('offerCity')) +
+      (i === 0 ? '<p class="hint" style="margin-top:6px">' + esc(t('offerOnly')) + '</p>' : '') + fText('bandingkan.tawaran.' + i + '.nama', t('offerName'), { max: 30 }) + locPicker('bandingkan.tawaran.' + i + '.lokasi', t('offerCity')) +
       fMoney('bandingkan.tawaran.' + i + '.gaji', t('basic')) + fMoney('bandingkan.tawaran.' + i + '.tunjangan', t('allowance')) + '</section>';
   });
   return '<div class="stats-grid">' + html + '</div>';

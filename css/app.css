@@ -473,3 +473,5 @@ body.dark .lw-grid, body.dark .lw-legend {
 .lw-legend i { width: 10px; height: 10px; border-radius: 2px; flex: none; }
 .lw-legend .lw-now-dot { background: var(--text); box-shadow: 0 0 0 1.5px var(--surface), 0 0 0 3px var(--lw-kerja); }
 @media (min-width: 900px) { .lw-grid { --lab: 26px; --gap: 2px; } .lw-r::before { font-size: 10px; } }
+.link-btn.inline-link { display: inline; min-height: 0; padding: 0; font-size: inherit; }
+.tog-row .tt { min-width: 0; }

@@ -87,7 +87,7 @@ const FIRE_SC = () => [['optimis', 'scOpt', '#46b974'], ['base', 'scMod', 'var(-
 calc({
   id: 'fire', icon: 'flame', color: '#c46a00', title: 'fireTitle', short: 'fireShort', sub: 'calcSubFire',
   defaults: {
-    currentAge: 30, targetAge: 45, incomeAuto: true, monthlyIncome: 10000000, currentSavings: 100000000,
+    currentAge: 30, targetAge: 45, incomeAuto: true, monthlyIncome: 4000000, currentSavings: 100000000,
     needsPct: 50, entPct: 15, invPct: 25, goldPct: 10,
     expectedReturn: 10, incomeGrowthRate: 5, inflationRate: 4, retirementReturn: 6, swr: 4, extraMonthly: 500000
   },
@@ -193,8 +193,8 @@ function fireView() {
   const top = hero(fireHeroHtml(s, R), { order: 1, label: t('fiScore') });
   const data = card(t('fireData'), '<div class="fire-ages">' + fNum('fire.currentAge', t('ageNow'), { min: 15, max: 80 }) + fNum('fire.targetAge', t('ageTarget'), { min: 16, max: 90 }) + '</div>' +
     '<p class="hint warn" data-live="ageWarn">' + (s.targetAge <= s.currentAge ? esc(t('ageWarn')) : '') + '</p>' +
-    '<div style="margin-top:12px">' + fToggle('fire.incomeAuto', t('useNet'), esc(t('useNetSub', { rp: rp(netSalary().avgNet) })), { live: 'incomeAuto' }) + '</div>' +
-    (f.incomeAuto ? '' : fMoney('fire.monthlyIncome', t('incomeL'))) + fMoney('fire.currentSavings', t('savingsL'), { hint: esc(t('savingsHint')) }), { order: 2, tight: true });
+    '<div style="margin-top:12px">' + fToggle('fire.incomeAuto', t('useNet'), esc(t('useNetSub', { rp: rp(netSalary().avgNet) })) + gajiLink(), { live: 'incomeAuto' }) + '</div>' +
+    (f.incomeAuto ? '' : fMoney('fire.monthlyIncome', t('incomeL'), { hint: manualOnlyHint() })) + fMoney('fire.currentSavings', t('savingsL'), { hint: esc(t('savingsHint')) }), { order: 2, tight: true });
   const alloc = '<section class="card" style="order:3"><div class="card-title" style="margin-bottom:4px"><span>' + esc(t('allocTitle')) + '</span>' +
     '<span data-live="alloc"><span class="fire-pill ' + (R.totalAlloc === 100 ? 'ok' : R.totalAlloc < 100 ? 'under' : 'over') + '">' + esc(t('allocTotal', { p: R.totalAlloc })) + '</span></span></div>' +
     FIRE_PCT.map((x) => fSlider('fire.' + x[0], t(x[1]), 0, 100, 1, (v) => v + '%', { dot: x[2], sub: () => esc(t('perMonth', { rp: rp(nominal[x[0]]) })) })).join('') +

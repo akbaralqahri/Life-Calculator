@@ -172,7 +172,7 @@ function zakatIncHtml(s) {
   const z = s.z, r = s.inc, neto = z.metode === 'neto';
   const input = card(t('zkIncData'),
     fSegField('zakat.metode', t('zkMethodL'), [['bruto', t('zkBruto')], ['neto', t('zkNeto')]], { hint: esc(t(neto ? 'zkNetoHint' : 'zkBrutoHint')) }) +
-    '<div style="margin-top:12px">' + fToggle('zakat.pakaiGaji', t('zkUseGaji'), esc(t('zkUseGajiSub', { rp: rp(zakatGajiValue(z.metode)), what: t(neto ? 'zkThp' : 'zkPay') })), { live: 'zkUseGaji' }) + '</div>' +
+    '<div style="margin-top:12px">' + fToggle('zakat.pakaiGaji', t('zkUseGaji'), esc(t('zkUseGajiSub', { rp: rp(zakatGajiValue(z.metode)), what: t(neto ? 'zkThp' : 'zkPay') })) + gajiLink(), { live: 'zkUseGaji' }) + '</div>' +
     (z.pakaiGaji ? '' : fMoney('zakat.gaji', t('zkGajiL'))) +
     fMoney('zakat.lain', t('zkLainL'), { hint: esc(t('zkLainHint')) }) + fMoney('zakat.bonus', t('zkBonusL'), { hint: esc(t('zkBonusHint')) }) +
     (neto ? fMoney('zakat.kebutuhan', t('zkNeedL')) + fMoney('zakat.cicilan', t('zkDebtL')) : '') +
