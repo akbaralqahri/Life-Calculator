@@ -127,6 +127,7 @@ calc({
   view: sevView,
   summary() {
     const s = sevState();
+    if (s.o.pakaiGaji && gajiEmpty()) return { value: t('sumGajiEmpty'), sub: t('sumGajiEmptySub') };
     const tt = sevTenureText(s.R.tenure, s.R.pkwt);
     return { value: rp(s.R.net), sub: s.R.pkwt ? t('sevSumPkwt', { t: tt }) : t('sevSumSub', { r: L('sevReasons')[s.R.reason.id], t: tt }) };
   }
@@ -218,5 +219,5 @@ function sevView() {
     '<button type="button" class="link-btn" data-act="ui" data-k="pesangon.all" aria-expanded="' + all + '">' + esc(all ? t('sevShowLess') : t('sevShowAll', { n: SEV_REASONS.length })) + '</button>',
   { order: 5, small: esc(t('sevCmpSub')) });
   // HP: hero → input → hasil (urut order); desktop: kiri hasil, kanan input
-  return cols(top, detail + cmp, job + uph, note(esc(t(pkwt ? 'sevNotePkwt' : 'sevNote')), 6));
+  return cols((o.pakaiGaji && gajiEmpty() ? needGajiCard() : '') + top, detail + cmp, job + uph, note(esc(t(pkwt ? 'sevNotePkwt' : 'sevNote')), 6));
 }

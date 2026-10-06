@@ -286,6 +286,6 @@ function cicilanView() {
   const c = cicilanCalc();
   const top = hero(cicilanHeroHtml(c), { order: 1, label: t('cicHeroPay') });
   // HP: hero → input → hasil (urut order); desktop: kiri hasil, kanan input
-  return cols(top, cicilanRatioHtml(c) + cicilanChartHtml(c) + cicilanExtraHtml(c),
+  return cols((c.s.useNet && gajiEmpty() ? needGajiCard() : '') + top, cicilanRatioHtml(c) + cicilanChartHtml(c) + cicilanExtraHtml(c),
     cicilanInputHtml(c) + cicilanUpfrontHtml(c), cicilanTableHtml(c) + note(esc(t('cicNote')), 8));
 }

@@ -209,5 +209,5 @@ function fireView() {
   const extra = '<section class="card" style="order:6"><div class="card-title" style="margin-bottom:0"><span>' + esc(t('boostTitle')) + '</span></div>' +
     fMoney('fire.extraMonthly', t('extraL'), { hint: esc(t('extraHint')) }) + '<div data-live="fireExtra" style="margin-top:6px">' + fireExtraHtml(s, R) + '</div></section>';
   // HP: input dulu lalu hasil (urut order); desktop: kiri hasil, kanan input
-  return cols(top, results + extra, data + alloc + assume, note(esc(t('fireNote')), 7));
+  return cols((f.incomeAuto && gajiEmpty() ? needGajiCard() : '') + top, results + extra, data + alloc + assume, note(esc(t('fireNote')), 7));
 }

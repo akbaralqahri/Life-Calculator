@@ -475,3 +475,26 @@ body.dark .lw-grid, body.dark .lw-legend {
 @media (min-width: 900px) { .lw-grid { --lab: 26px; --gap: 2px; } .lw-r::before { font-size: 10px; } }
 .link-btn.inline-link { display: inline; min-height: 0; padding: 0; font-size: inherit; }
 .tog-row .tt { min-width: 0; }
+/* ============ GAJI BELUM DIISI (pengguna baru) ============ */
+.need-gaji { display: flex; align-items: center; flex-wrap: wrap; gap: 12px 14px; background: var(--accent-soft); box-shadow: inset 0 0 0 1.5px var(--accent); }
+.need-gaji .ng-ic { width: 44px; height: 44px; border-radius: 14px; flex: none; display: grid; place-items: center; background: var(--accent-fill); color: var(--on-accent); }
+.need-gaji .ng-txt { flex: 1 1 220px; min-width: 0; }
+.need-gaji .ng-txt b { display: block; font-size: 16px; font-weight: 800; color: var(--text); }
+.need-gaji .ng-txt span { display: block; margin-top: 2px; font-size: 13px; line-height: 1.45; color: var(--text-2); }
+.need-gaji .btn { margin-left: auto; gap: 6px; }
+@media (max-width: 560px) { .need-gaji .btn { width: 100%; } }
+.calc-hero .hero-btn { align-self: flex-start; gap: 8px; margin-top: 6px; background: #fff; color: var(--hero-b); }
+.card.need-fill { box-shadow: 0 0 0 2px var(--accent), var(--shadow-sm); }
+.card.need-fill .input-group:has(#f-gaji-gaji) { border-color: var(--accent); background: var(--surface); }
+.need-chip { display: inline-block; padding: 3px 9px; border-radius: 999px; background: var(--accent-fill); color: var(--on-accent); font-size: 11px; font-weight: 800; }
+.empty-res { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 28px 20px; text-align: center; background: transparent; box-shadow: none; border: 1.5px dashed var(--line); }
+.empty-res b { font-size: 15px; font-weight: 800; }
+.empty-res span { font-size: 13px; color: var(--dim); max-width: 320px; line-height: 1.45; }
+.empty-res .er-bars { display: flex; align-items: flex-end; gap: 6px; height: 44px; margin-bottom: 6px; }
+.empty-res .er-bars i { width: 14px; border-radius: 4px; background: var(--surface-2); }
+.empty-res .er-bars i:nth-child(1) { height: 40%; } .empty-res .er-bars i:nth-child(2) { height: 100%; } .empty-res .er-bars i:nth-child(3) { height: 65%; }
+.home-hero .lbl { display: inline-flex; align-items: center; gap: 8px; }
+.home-hero .hero-cta { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; margin-top: 6px; min-height: 40px; padding: 0 14px; border-radius: 12px; background: #fff; color: var(--hero-b); font-weight: 700; font-size: 14px; }
+.pulse-dot { width: 8px; height: 8px; border-radius: 50%; background: #ffc233; box-shadow: 0 0 0 0 rgba(255,194,51,.7); animation: needPulse 1.8s infinite; }
+@keyframes needPulse { 70% { box-shadow: 0 0 0 8px rgba(255,194,51,0); } 100% { box-shadow: 0 0 0 0 rgba(255,194,51,0); } }
+@media (prefers-reduced-motion: reduce) { .pulse-dot { animation: none; } }

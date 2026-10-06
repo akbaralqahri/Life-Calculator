@@ -8,6 +8,8 @@ Object.assign(I18N.id, {
   greetMorning: 'Selamat pagi', greetNoon: 'Selamat siang', greetAfternoon: 'Selamat sore', greetNight: 'Selamat malam',
   homeHeroHint: 'Angka ini dipakai otomatis oleh FIRE, Cicilan, Zakat, Pesangon & lainnya.',
   sideNet: 'Gaji bersih / bln', sideHour: 'Nilai waktu',
+  homeEmptyBig: 'Isi gajimu dulu', homeEmptyHint: 'Ketuk di sini untuk mulai. Gaji bersihmu dipakai otomatis oleh Nilai Waktu, FIRE, Cicilan, Zakat, Pesangon & lainnya.',
+  homeEmptyCta: 'Isi gaji', sideEmpty: 'Belum diisi',
   homeNote: 'Semua hitungan berjalan di perangkatmu dan tersimpan di browser ini saja — tidak ada data yang dikirim ke server. Hasilnya estimasi edukatif, bukan nasihat keuangan, pajak, atau hukum.',
   installTitle: 'Pasang Life Calculator', installText: 'Buka dari layar utama seperti aplikasi, bisa dipakai tanpa internet.',
   installBtn: 'Pasang', installLater: 'Nanti', installIosTitle: 'Pasang di iPhone / iPad',
@@ -28,6 +30,8 @@ Object.assign(I18N.en, {
   greetMorning: 'Good morning', greetNoon: 'Good afternoon', greetAfternoon: 'Good afternoon', greetNight: 'Good evening',
   homeHeroHint: 'FIRE, Loans, Zakat, Severance & more use this figure automatically.',
   sideNet: 'Net salary / mo', sideHour: 'Time value',
+  homeEmptyBig: 'Enter your salary first', homeEmptyHint: 'Tap here to start. Time Value, FIRE, Loans, Zakat, Severance & more use your net salary automatically.',
+  homeEmptyCta: 'Enter salary', sideEmpty: 'Not filled in',
   homeNote: 'Everything is calculated on your device and stored in this browser only — nothing is sent to a server. Results are educational estimates, not financial, tax or legal advice.',
   installTitle: 'Install Life Calculator', installText: 'Open it from your home screen like an app, even offline.',
   installBtn: 'Install', installLater: 'Later', installIosTitle: 'Install on iPhone / iPad',
@@ -62,7 +66,11 @@ VIEWS.home = function () {
     '<button type="button" class="icon-btn" data-act="privacy" aria-label="Privacy mode" aria-pressed="' + S.prefs.privacy + '">' + ic(S.prefs.privacy ? 'eyeOff' : 'eye', 20) + '</button>' +
     '<button type="button" class="icon-btn" data-act="theme" aria-label="' + esc(t('darkMode')) + '">' + ic(S.prefs.theme === 'dark' ? 'sun' : 'moon', 20) + '</button></header>';
   html += '<div class="home-top">';
-  html += '<button type="button" class="calc-hero home-hero" data-act="nav" data-v="gaji"><span class="lbl">' + esc(t('netMonthly')) + '</span><span class="big">' + esc(rp(r.thp)) + '</span>' +
+  if (gajiEmpty()) {
+    html += '<button type="button" class="calc-hero home-hero" data-act="fillGaji"><span class="lbl"><i class="pulse-dot" aria-hidden="true"></i>' + esc(t('gajiEmptyLbl')) + '</span>' +
+      '<span class="big">' + esc(t('homeEmptyBig')) + '</span>' + heroLine(esc(t('homeEmptyHint'))) +
+      '<span class="hero-cta">' + ic('wallet', 18) + esc(t('homeEmptyCta')) + ic('chevR', 18) + '</span></button>';
+  } else html += '<button type="button" class="calc-hero home-hero" data-act="nav" data-v="gaji"><span class="lbl">' + esc(t('netMonthly')) + '</span><span class="big">' + esc(rp(r.thp)) + '</span>' +
     heroCells([[t('valueTime'), esc(rp(tv.perHour)) + ' <small>' + esc(t('perHour')) + '</small>'], [t('fiScore'), fire && !fire.R.empty ? num(Math.floor(fire.R.readiness), 0) + '%' : '–']]) +
     heroLine(esc(t('homeHeroHint'))) + '</button>';
   html += installCardHtml() + '</div>';
@@ -83,6 +91,11 @@ VIEWS.home = function () {
 function sideSummaryHtml() {
   const r = netSalary();
   const tv = timeValue();
+  if (gajiEmpty()) {
+    return '<button type="button" class="side-level" data-act="fillGaji"><span class="row"><span class="lv-mini">' + ic('wallet', 20) + '</span><span><span class="dim" style="font-size:12px;display:block">' + esc(t('sideNet')) + '</span>' +
+      '<b style="display:block;font-size:15px">' + esc(t('sideEmpty')) + '</b></span></span>' +
+      '<span class="link-btn" style="min-height:0;padding:0;font-size:12px">' + esc(t('homeEmptyCta')) + ' ' + ic('chevR', 14) + '</span></button>';
+  }
   return '<button type="button" class="side-level" data-act="nav" data-v="gaji"><span class="row"><span class="lv-mini">' + ic('wallet', 20) + '</span><span><span class="dim" style="font-size:12px;display:block">' + esc(t('sideNet')) + '</span>' +
     '<b style="display:block;font-size:15px" class="num">' + esc(rp(r.thp)) + '</b></span></span>' +
     '<span class="dim" style="font-size:12px">' + esc(t('sideHour')) + ' <b class="num" style="color:var(--text)">' + esc(rp(tv.perHour)) + '</b> ' + esc(t('perHour')) + '</span></button>';

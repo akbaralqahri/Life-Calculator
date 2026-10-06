@@ -1,7 +1,7 @@
 /* Service worker Life Calculator — aplikasi tetap bisa dibuka tanpa internet.
  * Strategi: jaringan dulu (selalu versi terbaru saat online), cadangan dari cache saat offline.
  * Ganti VERSION setiap rilis; daftar CORE dicek oleh test/pwa.test.js agar sama dengan index.html. */
-const VERSION = 'lc-1.0.1';
+const VERSION = 'lc-1.0.2';
 const CORE = [
   './',
   'index.html',

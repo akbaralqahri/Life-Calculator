@@ -122,6 +122,12 @@ Object.assign(I18N.id, {
   editInGaji: 'Ubah di Gaji Bersih', fromGajiBase: 'gaji pokok {g} + tunjangan {a}',
   manualOnly: 'Hanya dipakai di kalkulator ini — kalkulator lain tetap memakai Gaji Bersih ({rp}/bln).',
   offerOnly: 'Hanya untuk perbandingan — tidak mengubah data di Gaji Bersih.',
+  needGajiTitle: 'Isi gajimu dulu', needGajiText: 'Kalkulator ini memakai gaji bersihmu. Isi gaji pokok di Gaji Bersih supaya hasil & grafiknya muncul.',
+  needGajiBtn: 'Isi gaji sekarang', gajiEmptyLbl: 'Langkah pertama', gajiEmptyBig: 'Isi gaji pokokmu',
+  gajiEmptyLine: 'Gaji bersih, grafik potongan, dan hitungan setahun langsung muncul setelah gaji diisi.', gajiEmptyBtn: 'Mulai isi gaji',
+  gajiEmptyRes: 'Hasil & grafik tampil di sini', gajiEmptyResSub: 'Isi gaji pokok (dan tunjangan tetap bila ada) di kartu Data gaji.',
+  startHere: 'Mulai di sini', gajiEmptyPos: 'Isi gaji dulu untuk melihat posisinya terhadap UMK/UMP.', gajiEmptyEq: 'Isi gaji dulu untuk melihat setaranya di kota tujuan.',
+  sumGajiEmpty: 'Belum diisi', sumGajiEmptySub: 'Isi gaji untuk mulai',
   sumYear: 'Setahun {rp}', sumDay: '{rp} per hari kerja', sumCmpPick: 'Isi dua tawaran kerja', sumCmpWin: '{name} unggul {rp}/bln', sumCmpSame: 'Kedua tawaran hampir sama'
 });
 Object.assign(I18N.en, {
@@ -136,6 +142,12 @@ Object.assign(I18N.en, {
   editInGaji: 'Edit in Net Salary', fromGajiBase: 'base {g} + allowance {a}',
   manualOnly: 'Used by this calculator only — the others keep using Net Salary ({rp}/mo).',
   offerOnly: 'For comparison only — this does not change your Net Salary details.',
+  needGajiTitle: 'Enter your salary first', needGajiText: 'This calculator uses your net salary. Enter your base pay in Net Salary to see the results & charts.',
+  needGajiBtn: 'Enter salary now', gajiEmptyLbl: 'First step', gajiEmptyBig: 'Enter your base pay',
+  gajiEmptyLine: 'Net pay, the deductions chart and the yearly breakdown appear as soon as you enter it.', gajiEmptyBtn: 'Start entering',
+  gajiEmptyRes: 'Results & charts show up here', gajiEmptyResSub: 'Enter your base pay (and fixed allowance, if any) in the Salary details card.',
+  startHere: 'Start here', gajiEmptyPos: 'Enter your salary first to see how it compares to the UMK/UMP.', gajiEmptyEq: 'Enter your salary first to see its equivalent in the target city.',
+  sumGajiEmpty: 'Not filled in', sumGajiEmptySub: 'Enter your salary to start',
   sumYear: '{rp} a year', sumDay: '{rp} per workday', sumCmpPick: 'Enter two job offers', sumCmpWin: '{name} leads by {rp}/mo', sumCmpSame: 'Both offers are about the same'
 });
 
@@ -150,6 +162,24 @@ function gajiLink() {
   const g = inp('gaji');
   return '<br>' + esc(t('fromGajiBase', { g: rp(g.gaji), a: rp(g.tunjangan) })) + ' · <button type="button" class="link-btn inline-link" data-act="nav" data-v="gaji">' + esc(t('editInGaji')) + '</button>';
 }
+/** Belum ada gaji yang diisi di Gaji Bersih (pengguna baru / setelah hapus isian). */
+function gajiEmpty() { const g = inp('gaji'); return !(g.gaji + g.tunjangan + g.tidakTetap > 0); }
+/** Kartu ajakan mengisi gaji, untuk kalkulator yang memakai gaji bersih saat Gaji Bersih masih kosong. */
+function needGajiCard(order) {
+  return '<section class="card need-gaji span2" style="order:' + (order || 0) + '"><span class="ng-ic">' + ic('wallet', 22) + '</span>' +
+    '<span class="ng-txt"><b>' + esc(t('needGajiTitle')) + '</b><span>' + esc(t('needGajiText')) + '</span></span>' +
+    '<button type="button" class="btn btn-primary" data-act="fillGaji">' + esc(t('needGajiBtn')) + ic('chevR', 18) + '</button></section>';
+}
+/** Ke Gaji Bersih lalu fokus ke isian gaji pokok. */
+ACT.fillGaji = () => {
+  const focus = () => {
+    const el = document.getElementById('f-gaji-gaji');
+    if (!el) return;
+    try { el.focus({ preventScroll: true }); } catch (e) {}
+    el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+  };
+  if (S.view === 'gaji') focus(); else { go('gaji'); setTimeout(focus, 150); }
+};
 /** Catatan di bawah isian manual: kalkulator lain tidak ikut berubah. */
 function manualOnlyHint() { return esc(t('manualOnly', { rp: rp(netSalary().avgNet) })); }
 function timeValue() { const w = inp('waktu'); return calcTime(netSalary().avgNet, w.jamKerja, w.hariKerja); }
@@ -192,7 +222,7 @@ HOOKS.change.push((el) => {
 const JKK_KEYS = ['SANGAT_RENDAH', 'RENDAH', 'SEDANG', 'TINGGI', 'SANGAT_TINGGI'];
 calc({
   id: 'gaji', icon: 'wallet', color: '#0b776b', title: 'gajiTitle', short: 'gajiShort', sub: 'gajiSub',
-  defaults: { gaji: 3500000, tunjangan: 500000, tidakTetap: 0, thr: 0, ptkp: 'TK/0', kes: true, jht: true, jp: true, jkk: 'SANGAT_RENDAH', dtp: false, lokasi: '', lokasiBanding: '' },
+  defaults: { gaji: 0, tunjangan: 0, tidakTetap: 0, thr: 0, ptkp: 'TK/0', kes: true, jht: true, jp: true, jkk: 'SANGAT_RENDAH', dtp: false, lokasi: '', lokasiBanding: '' },
   ui: { adv: false, employer: false },
   clean(o) {
     ['gaji', 'tunjangan', 'tidakTetap', 'thr'].forEach((k) => { o[k] = clamp(Math.round(o[k]), 0, 999999999999); });
@@ -202,15 +232,25 @@ calc({
     o.lokasiBanding = locKey(o.lokasiBanding);
     return o;
   },
+  // kosong ↔ terisi saat mengetik: gambar ulang penuh supaya hasil & grafik langsung muncul/hilang
+  onSet() { if (S.view === 'gaji' && gajiEmpty() !== !!ui('gaji').shownEmpty) { renderShell(); render(); } },
   view: gajiView,
-  summary() { const r = netSalary(); return { value: rp(r.thp) + ' ' + t('perMonthShort'), sub: t('sumYear', { rp: compactRp(r.thpYear) }) }; }
+  summary() {
+    if (gajiEmpty()) return { value: t('sumGajiEmpty'), sub: t('sumGajiEmptySub') };
+    const r = netSalary();
+    return { value: rp(r.thp) + ' ' + t('perMonthShort'), sub: t('sumYear', { rp: compactRp(r.thpYear) }) };
+  }
 });
 function gajiView() {
   const cfg = TARIF.config;
   const inp_ = inp('gaji');
   const u = ui('gaji');
   const r = netSalary();
-  const top = hero('<span class="lbl">' + esc(t('netMonthly')) + '</span><span class="big">' + esc(rp(r.thp)) + '</span>' +
+  const empty = u.shownEmpty = gajiEmpty();
+  const top = empty ? hero('<span class="lbl">' + esc(t('gajiEmptyLbl')) + '</span><span class="big">' + esc(t('gajiEmptyBig')) + '</span>' +
+    '<span class="sep"></span>' + heroLine(esc(t('gajiEmptyLine'))) +
+    '<button type="button" class="btn hero-btn" data-act="fillGaji">' + ic('wallet', 18) + esc(t('gajiEmptyBtn')) + '</button>', { order: 1, label: t('gajiEmptyBig') }) :
+    hero('<span class="lbl">' + esc(t('netMonthly')) + '</span><span class="big">' + esc(rp(r.thp)) + '</span>' +
     '<span class="sep"></span>' + heroLine(esc(t('december')), esc(rp(r.thpDec))) +
     (r.thrMonth ? heroLine(esc(t('thrMonth')), esc(rp(r.thrMonth.thp))) : '') + heroLine(esc(t('yearly')), esc(rp(r.thpYear))), { order: 1, label: t('netMonthly') });
   const where = card(t('where'), '<div data-live="where">' + stackbar([
@@ -224,7 +264,9 @@ function gajiView() {
     '<button type="button" class="disclose" data-act="ui" data-k="gaji.adv" aria-expanded="' + !!u.adv + '" style="border-top:1px solid var(--line);margin-top:4px"><span>' + esc(t('advanced')) + '</span>' + ic('chevD', 20) + '</button>' +
     (u.adv ? fMoney('gaji.tidakTetap', t('irregular'), { hint: esc(t('irregularHint')) }) + fMoney('gaji.thr', t('thrL'), { hint: esc(t('thrHint')) }) +
       fSelect('gaji.jkk', t('jkkL'), JKK_KEYS.map((k) => [k, L('jkkOpt')[k] + ' · ' + pctTxt(cfg['JKK_' + k]) + '%'])) +
-      '<div style="margin-top:8px">' + fToggle('gaji.dtp', t('dtpL'), esc(t('dtpSub', { cap: rp(cfg.DTP_BATAS_BRUTO) }))) + '</div>' : ''), { order: 4, tight: true });
+      '<div style="margin-top:8px">' + fToggle('gaji.dtp', t('dtpL'), esc(t('dtpSub', { cap: rp(cfg.DTP_BATAS_BRUTO) }))) + '</div>' : ''),
+    // kosong: kartu isian naik tepat di bawah hero & ditandai
+    { order: empty ? 1 : 4, tight: true, cls: empty ? 'need-fill' : '', small: empty ? '<span class="need-chip">' + esc(t('startHere')) + '</span>' : '' });
   const breakdown = card(t('breakdown'), '<div class="rows" data-live="breakdown">' +
     row(t('payPlus'), esc(rp(r.upah))) + (r.pay > r.upah ? row(t('irregularLine'), esc(rp(r.pay - r.upah))) : '') +
     row(t('premiLine'), '+ ' + esc(rp(r.premi))) + row(t('brutoLine'), esc(rp(r.bruto))) +
@@ -241,6 +283,11 @@ function gajiView() {
       row(t('empJp', { p: pctTxt(cfg.JP_PERUSAHAAN) }), esc(rp(r.emp.jp))) + row(t('empJkk', { p: pctTxt(cfg['JKK_' + inp_.jkk]) }), esc(rp(r.emp.jkk))) +
       row(t('empJkm', { p: pctTxt(cfg.JKM) }), esc(rp(r.emp.jkm))) + row(t('empTotal'), esc(rp(r.empTotal))) + row(t('companyCost'), esc(rp(r.companyCost)), 'total') + '</div>' : '') + '</section>';
   // HP: satu kolom urut order; desktop: kolom kiri hasil, kolom kanan input
+  if (empty) {
+    const ghost = '<section class="card empty-res" style="order:3"><div class="er-bars" aria-hidden="true"><i></i><i></i><i></i></div>' +
+      '<b>' + esc(t('gajiEmptyRes')) + '</b><span>' + esc(t('gajiEmptyResSub')) + '</span></section>';
+    return cols(top, ghost, wagePosHtml(r, inp_) + data + wageEqHtml(r, inp_), note(esc(t('calcNote', { y: cfg.TAHUN_ATURAN })), 9));
+  }
   return cols(top, where + breakdown + year + emp, wagePosHtml(r, inp_) + data + wageEqHtml(r, inp_), note(esc(t('calcNote', { y: cfg.TAHUN_ATURAN })), 9));
 }
 
@@ -251,6 +298,7 @@ function wagePosHtml(r, g) {
     locPicker('gaji.lokasi', t('domicile'));
   const w = W.byKey[g.lokasi];
   if (!w) return h + '<p class="hint" style="margin-top:10px">' + esc(t('pickDomicileHint', { y: W.year })) + '</p></section>';
+  if (gajiEmpty()) return h + '<p class="hint" style="margin-top:10px">' + esc(t('gajiEmptyPos')) + '</p></section>';
   const c = wageCompare(r.upah, w.value);
   const st = c.status === 'below' ? 'stBelow' : c.status === 'at' ? 'stAt' : 'stAbove';
   const k = wageRank(r.upah, W.regions);
@@ -273,6 +321,7 @@ function wageEqHtml(r, g) {
   h += locPicker('gaji.lokasiBanding', t('eqTarget'));
   const to = W.byKey[g.lokasiBanding];
   if (!to) return h + '<p class="hint" style="margin-top:10px">' + esc(t('eqPick')) + '</p></section>';
+  if (gajiEmpty()) return h + '<p class="hint" style="margin-top:10px">' + esc(t('gajiEmptyEq')) + '</p></section>';
   const eq = wageEquivalent(r.thp, from.value, to.value);
   return h + '<div data-live="eq" style="margin-top:12px">' + callout('coins', esc(t('eqResult', { rp: rp(r.thp), from: wagePlace(from), eq: rp(eq), to: wagePlace(to) })),
     esc(t('eqRatio', { to: wagePlace(to), from: wagePlace(from), x: num(to.value / from.value, 2) }))) + '</div>' +
@@ -292,7 +341,11 @@ calc({
     return o;
   },
   view: waktuView,
-  summary() { const tv = timeValue(); return { value: rp(tv.perHour) + ' ' + t('perHour'), sub: t('sumDay', { rp: rp(tv.perDay) }) }; }
+  summary() {
+    if (gajiEmpty()) return { value: t('sumGajiEmpty'), sub: t('sumGajiEmptySub') };
+    const tv = timeValue();
+    return { value: rp(tv.perHour) + ' ' + t('perHour'), sub: t('sumDay', { rp: rp(tv.perDay) }) };
+  }
 });
 function waktuView() {
   const w = inp('waktu');
@@ -301,7 +354,7 @@ function waktuView() {
   const tv = calcTime(r.avgNet, w.jamKerja, w.hariKerja);
   const W = wages();
   const mw = W.byKey[g.lokasi];
-  let html = hero('<span class="lbl">' + esc(t('valueTime')) + '</span><span class="big">' + esc(rp(tv.perHour)) + ' <small>' + esc(t('perHour')) + '</small></span>' +
+  let html = (gajiEmpty() ? needGajiCard() : '') + hero('<span class="lbl">' + esc(t('valueTime')) + '</span><span class="big">' + esc(rp(tv.perHour)) + ' <small>' + esc(t('perHour')) + '</small></span>' +
     heroCells([[t('perMin'), esc(rp(tv.perMin))], [t('perWorkday'), esc(rp(tv.perDay))]]) +
     (mw && tv.hoursMonth > 0 ? heroLine(esc(t('timeWage', { kind: mw.kind, place: mw.kind === 'UMK' ? mw.region : mw.prov, rp: rp(mw.value / tv.hoursMonth), x: ratioTxt(r.upah / mw.value) }))) : ''), { label: t('valueTime') });
   html += '<section class="card"><div class="rows"><div class="row"><span>' + esc(t('avgNet')) + ' <button type="button" class="link-btn" style="min-height:0;display:inline;padding:0" data-act="nav" data-v="gaji">· ' + esc(t('fromNet')) + '</button></span><b>' + esc(rp(r.avgNet)) + '</b></div></div>' +
@@ -339,6 +392,7 @@ calc({
   view: cmpView,
   summary() {
     const res = cmpResult();
+    if (!res[0].r.pay && !res[1].r.pay) return { value: t('sumCmpPick'), sub: '' };
     const d = res[1].r.thp - res[0].r.thp;
     const base = Math.max(1, Math.min(res[0].r.thp, res[1].r.thp));
     if (Math.abs(d) / base < 0.01) return { value: t('sumCmpSame'), sub: offersList().map((o) => o.nama).join(' · ') };
@@ -355,7 +409,7 @@ function offersList() {
       { nama: t('offerA'), gaji: g.gaji, tunjangan: g.tunjangan, lokasi: g.lokasi || '' },
       { nama: t('offerB'), gaji: Math.round(g.gaji * 1.2 / 100000) * 100000, tunjangan: g.tunjangan, lokasi: other }
     ];
-    persist('bandingkan');
+    if (!gajiEmpty()) persist('bandingkan'); // masih kosong: isi ulang dari Gaji Bersih setelah gaji diisi
   }
   return o.tawaran;
 }
@@ -382,7 +436,8 @@ function cmpView() {
   const lines = [];
   const d = B.r.thp - A.r.thp;
   const base = Math.max(1, Math.min(A.r.thp, B.r.thp));
-  if (Math.abs(d) / base < 0.01) lines.push(t('cmpSame'));
+  if (!A.r.pay && !B.r.pay) lines.push(t('sumCmpPick'));
+  else if (Math.abs(d) / base < 0.01) lines.push(t('cmpSame'));
   else lines.push(t('cmpHigher', { name: d > 0 ? offerName(1) : offerName(0), rp: rp(Math.abs(d)), p: num(Math.abs(d) / base * 100, 1) }));
   if (both && A.wage.value !== B.wage.value) {
     const de = eqB - A.r.thp;

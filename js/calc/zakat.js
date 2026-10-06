@@ -227,5 +227,5 @@ function zakatView() {
     [['inc', 'zkTabInc'], ['maal', 'zkTabMaal'], ['fit', 'zkTabFit']].map((x) => '<button type="button" data-act="ui" data-k="zakat.tab" data-v="' + x[0] + '" aria-pressed="' + (tab === x[0]) + '">' + esc(t(x[1])) + '</button>').join('') + '</div>';
   const part = tab === 'maal' ? zakatMaalHtml(s) : tab === 'fit' ? zakatFitHtml(s) : zakatIncHtml(s);
   // HP: tab → hero → input → hasil (urut order); desktop: kiri hasil, kanan input
-  return cols(tabs + hero(zakatHero(s, tab), { order: 1, label: t('zkTitle') }), part.left, part.right, part.note);
+  return cols(tabs + (tab === 'inc' && s.z.pakaiGaji && gajiEmpty() ? needGajiCard() : '') + hero(zakatHero(s, tab), { order: 1, label: t('zkTitle') }), part.left, part.right, part.note);
 }

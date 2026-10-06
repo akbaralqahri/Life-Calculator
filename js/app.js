@@ -6,7 +6,7 @@
  * lewat calc({...}); rumus murninya ada di js/engine/*.js (diuji di test/).
  * ===================================================================== */
 
-const APP = { name: 'Life Calculator', version: '1.0.1' };
+const APP = { name: 'Life Calculator', version: '1.0.2' };
 
 /* ============================ IKON (garis, 24×24) ============================ */
 const ICONS = {
